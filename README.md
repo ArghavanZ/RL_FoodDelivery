@@ -16,3 +16,13 @@ This research exploring **dynamic pricing** for food delivery platforms using **
 
 ## 🏗️ Repository Structure
 
+drone-food-delivery/
+├── network/data # network data 
+├── notebooks/ # Jupyter notebooks for analysis and experiments
+├── src/ # Source code for environments, agents, and utils
+├── scripts/ # Training and evaluation scripts
+├── configs/ # YAML/JSON configs for running experiments
+├── results/ # Outputs, logs, and plots
+├── docs/ # Documentation or figures for paper
+├── requirements.txt # Python dependencies
+└── README.md # Project overview and instructions

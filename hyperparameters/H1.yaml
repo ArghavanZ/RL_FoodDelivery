@@ -1,0 +1,30 @@
+# meta-parameters
+project_name : ''
+run_name : ''
+seed: ''
+device: 'cpu'
+
+model:
+  name: 'PPO'
+  net_arch: [128, 128]            # Larger network (two layers of size 128)
+  policy: "MultiInputPolicy"      # Multi-Layer Perceptron policy
+  learning_rate: 1e-4             # Stable learning rate for PPO
+  n_steps: 1024                   # Number of steps before updating
+  batch_size: 128                  # Minibatch size
+  n_epochs: 10                    # PPO epochs per update
+  gamma: 0.99                     # Discount factor
+  gae_lambda: 0.95                # GAE smoothing factor
+  clip_range: 0.2                 # PPO clip range
+  ent_coef: 0.001                 # Entropy coefficient (for exploration)
+  vf_coef: 0.5                    # Value function loss coefficient
+  max_grad_norm: 0.5              # Gradient clipping for stability
+  tensorboard_log: "PPO"
+  verbose: 2
+
+env_setup:
+  num_proc: 8
+  timelimit: 200
+algo:
+  name: "default"
+  total_timesteps: 5000000         # Total training steps
+  log_interval: 1                
