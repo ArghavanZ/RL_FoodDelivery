@@ -119,18 +119,17 @@ def get_all_lat(order, couriers, T_T):
     Returns:
     - all_lat: Array of latencies for each courier
     '''
-    o_p = int(order[0]) # Order's pickup location
-    o_d = int(order[1]) # Order's dropoff location
-    #o_p = int(order[0])-1 # Order's pickup location (indexing from 0)
-    #o_d = int(order[1])-1 # Order's dropoff location (indexing from 0)
+    
+    o_p = int(order[0])-1 # Order's pickup location (indexing from 0)
+    o_d = int(order[1])-1 # Order's dropoff location (indexing from 0)
     num_couriers = couriers.shape[0]
     all_lat = np.zeros(num_couriers)
 
     for idx in range(num_couriers):
         c = couriers[idx]
         c_j = int(c[0])
-        c_d = int(c[1])
-        #c_d = int(c[1]) - 1 # Courier's dropoff location (indexing from 0)
+        
+        c_d = int(c[1]) - 1 # Courier's dropoff location (indexing from 0)
         c_l = c[2]
 
         # Compute travel times

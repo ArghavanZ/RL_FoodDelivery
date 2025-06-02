@@ -64,13 +64,13 @@ First to train the RL algorithm, use one of the scenarios:
 Scenario1:
 ```bash
 conda activate drone_rl
-python scripts/train_1.py --start_seed s --n_seeds l --HP_path hyperparameters/H1.yaml --C_path env_config/env_c10.yaml 
+python scripts/train1.py --start_seed s --n_seeds l --HP_path hyperparameters/H1.yaml --C_path env_config/env_c10.yaml 
 ```
 
 Scenario1:
 ```bash
 conda activate drone_rl
-python scripts/train_2.py --start_seed s --n_seeds l --HP_path hyperparameters/H1.yaml --C_path env_config/env_c20.yaml 
+python scripts/train2.py --start_seed s --n_seeds l --HP_path hyperparameters/H1.yaml --C_path env_config/env_c20.yaml 
 ```
 
 To evaluate each scenario use the following code:

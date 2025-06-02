@@ -50,7 +50,7 @@ def run_n_evals(env, policy, policy_name,n, seed,  directory , env_cfg):
     """
     N = env.unwrapped.N
     M = env.unwrapped.M
-    all_stats = np.zeros(shape=(n,6+M+M),dtype=np.float32)
+    all_stats = np.zeros(shape=(n,8+M+M),dtype=np.float32)
     reg_stats = np.zeros(shape=(n,N,4+M),dtype=np.float32)
     # computation 
     #-------------
@@ -63,6 +63,7 @@ def run_n_evals(env, policy, policy_name,n, seed,  directory , env_cfg):
         ep_tau, reg_tau = 0, np.zeros(N)
         ep_lat, reg_lat = 0, np.zeros(N)
         ep_ord, reg_ord = 0, np.zeros(N)
+        ep_arrival , ep_queue = 0 , 0
         ep_modes, reg_modes = np.zeros(M), np.zeros((N,M)) 
         # parameters for epsiodes (all regions)
         ep_rew = 0
@@ -79,9 +80,10 @@ def run_n_evals(env, policy, policy_name,n, seed,  directory , env_cfg):
             action = policy(obs, info, env)
             obs, rew, terminated, truncated, info = env.step(action)
             t_rew += rew
-            # wandb.log({"eval/step_reward": rew, 
-            # "eval/cum_rew": t_rew, 
-            # "eval/step": t_start,})
+            wandb.log({"eval/step_reward": rew, 
+            "eval/cum_rew": t_rew, 
+            "eval/step": t_start,
+            "eval/Queue_length": info["Queue_Length"]})
             ep_rew += rew
             i_reg = info['region']
             i_mode = info['mode']
@@ -91,6 +93,8 @@ def run_n_evals(env, policy, policy_name,n, seed,  directory , env_cfg):
                 ep_tau += info['tau']
                 ep_lat += info['lat']
                 ep_ord += info['ord']
+                ep_arrival = info['arrivals']
+                ep_queue = np.max(info['Queue_Length'],ep_queue)
                 ep_modes[i_mode] += 1
                 # acquire rolling stats for REG
                 reg_uti[i_reg] += info['utility']
@@ -110,7 +114,7 @@ def run_n_evals(env, policy, policy_name,n, seed,  directory , env_cfg):
         if ep_ord>0:
             all_stats[i_ep] = np.array([ep_modes[i] for i in range(M)]+
                                     [ep_modes_uti[i] for i in range(M)]+
-                                    [ep_ord, ep_lat/ep_ord, ep_tau/ep_ord, ep_uti/ep_ord, ep_rew/t, ep_rew])
+                                    [ep_ord, ep_lat/ep_ord, ep_tau/ep_ord, ep_uti/ep_ord, ep_rew/t, ep_rew , ep_arrival, ep_queue])
         
         wandb.log({"eval/episode_reward": ep_rew, 
         "eval/episode": i_ep,
@@ -118,7 +122,9 @@ def run_n_evals(env, policy, policy_name,n, seed,  directory , env_cfg):
         "eval/episode_utility": ep_uti,
         "eval/episode_tau": ep_tau,
         "eval/episode_lat": ep_lat,
-        "eval/episode_order": ep_ord})
+        "eval/episode_order": ep_ord,
+        "eval/episode_arrival": ep_arrival,
+        "eval/episode_queue": ep_queue,})
 
         
         
@@ -212,7 +218,7 @@ def collect_evals(env_params , directory, env_cfg):
     env = Monitor(gym.wrappers.TimeLimit(MMDelivery(params=env_params), max_episode_steps=max_ep_len))
     # NOTE: assume that run_n_evals returns stats in direct correspondence to these columns 
     # other than policy
-    stats_cols = ["policy",] + ["car", "drone"] + ["ca %", "drone %"] + ["ord", "lat", "tau", "uti" ,"rew/step", "rew" ]  # Add 'Policy' as the first column
+    stats_cols = ["policy",] + ["car", "drone"] + ["ca %", "drone %"] + ["ord", "lat", "tau", "uti" ,"rew/step", "rew" , "T_ord" , "q_l"]  # Add 'Policy' as the first column
     reg_stats_cols = ["region",] + ["car", "drone"] + ["ord", "lat", "tau", "uti",]  # Add 'Policy' as the first column
     policy_names = ["Random", "Max Price", "Zone Based","Max Order","RL"]
     policy_map = {"Random": policy_rand,

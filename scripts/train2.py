@@ -127,7 +127,7 @@ def get_hp_cfg():
     with open(f"{ROOT}/{ARGS.HP_path}", 'r') as f:
         hp_cfg = yaml.load(f, Loader=yaml.SafeLoader)
     # next we update any meta-parameters that can be set before itearting over seeds
-    hp_cfg['project_name'] = f"drone_{ARGS.project_id}"
+    hp_cfg['project_name'] = f"RL_{ARGS.project_id}"
     return hp_cfg
 
 
@@ -190,7 +190,7 @@ def main():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--project_id', type=str, default='RL_Network', help="additional identiffier used for project name")
+    parser.add_argument('--project_id', type=str, default='FoodDElivery', help="additional identiffier used for project name")
     parser.add_argument('--run_name', type=str, default='run', help="all runs saved to the wandb project will use config info ,run_name and seed for identification")
     parser.add_argument('--start_seed', type=int, default=0, help="seed to start from")
     parser.add_argument('--n_seeds', type=int, default=1, help="number of seeds to run")

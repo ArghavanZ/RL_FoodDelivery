@@ -19,7 +19,9 @@ def load_network(file_path = 'SiouxFalls_net.csv'):
     The default file path is 'SiouxFalls_net.csv'.
     Returns a NetworkX DiGraph object representing the network.
     '''
-    file_path = f"RL_FoodDelivery/network/data/{file_path}"
+
+    #RL_FoodDelivery/network/data/SiouxFalls_net.csv
+    file_path = f"/home/arghavan/2025/RL_FoodDelivery/network/data/{file_path}"
     # Read the CSV file into a DataFrame
     df = pd.read_csv(file_path)
     G = nx.from_pandas_edgelist(df, 'A', 'B', edge_attr='a0', create_using=nx.DiGraph())
@@ -32,7 +34,7 @@ def load_pos(file_path = 'SiouxFalls_node.csv'):
     The default file path is 'SiouxFalls_node.csv'.
     Returns a numpy array of the nodes positions and a dictionary of the nodes positions.
     '''
-    file_path = f"RL_FoodDelivery/network/data/{file_path}"
+    file_path = f"/home/arghavan/2025/RL_FoodDelivery/network/data/{file_path}"
     
     # Read the CSV file into a DataFrame
     pos = pd.read_csv(file_path , index_col='Node')

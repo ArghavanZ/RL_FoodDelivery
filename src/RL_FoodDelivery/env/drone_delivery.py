@@ -99,7 +99,7 @@ class MMDelivery(gym.Env):
         self.M = len(self.modalities) # The number of courier modalities
 
         #self.regions = np.arange(self.N)# list of int, length N, regions (nodes) in the network
-        self.regions = np.arrange(1, self.N+1) # list of int, length N, regions (nodes) in the network
+        self.regions = np.arange(1, self.N+1) # list of int, length N, regions (nodes) in the network
                 
         # TODO: Render modes are not implemented, left boiler plate code inplace
         assert render_mode is None or render_mode in self.metadata["render_modes"]
@@ -113,14 +113,14 @@ class MMDelivery(gym.Env):
                 "o_p": spaces.Box(
                     low=0,
                     #high=self.N,
-                    high=self.N+1 
+                    high=self.N+1 ,
                     shape=(self.len_q,),
                     dtype=np.int32
                 ),
                 "o_d": spaces.Box(
                     low=0,
                     #high=self.N,
-                    high=self.N+1 
+                    high=self.N+1, 
                     shape=(self.len_q,),
                     dtype=np.int32
                 ),
@@ -139,8 +139,8 @@ class MMDelivery(gym.Env):
                 "c_d": spaces.Box(
                     #low=0,
                     low=1,
-                    high=self.N,
-                    high=self.N+1 
+                    #high=self.N,
+                    high=self.N+1, 
                     shape=(sum(self.num_couriers),),
                     dtype=np.int32
                 ),
@@ -170,17 +170,21 @@ class MMDelivery(gym.Env):
 
     def _get_obs(self):
         
-        np_queue = np.array(self.queue) 
-        num_orders = int(min(len(self.queue), self.len_q)) # Ensure we do not exceed the length of the observed queue
-        # Initialize arrays with zeros (or any default value)
+        
         o_p = np.zeros(self.len_q, dtype=np.int32)
         o_d = np.zeros(self.len_q, dtype=np.int32)
         o_l = np.zeros(self.len_q, dtype=np.int32)
+
+        if len(self.queue) > 0:
+            np_queue = np.array(self.queue) 
+            num_orders = int(min(len(self.queue), self.len_q)) # Ensure we do not exceed the length of the observed queue
+        # Initialize arrays with zeros (or any default value)
         # Fill in the actual data
-        o_p[:num_orders] = np_queue[:, 0].astype(np.int32)
-        o_d[:num_orders] = np_queue[:, 1].astype(np.int32)
-        o_l[:num_orders] = np_queue[:, 2].astype(np.int32)
+            o_p[:num_orders] = np_queue[:num_orders, 0].astype(np.int32)
+            o_d[:num_orders] = np_queue[:num_orders, 1].astype(np.int32)
+            o_l[:num_orders] = np_queue[:num_orders, 2].astype(np.int32)
         # Similarly, ensure other components have consistent shapes
+        
         observation = {
             "o_p": o_p,
             "o_d": o_d,
@@ -207,7 +211,9 @@ class MMDelivery(gym.Env):
                 "lat": self.chosen_latency,
                 "utility": self.chosen_utility,
                 "mode": self.chosen_mode,
-                "region":self.chosen_reg
+                "region":self.chosen_reg,
+                "Queue_Length": len(self.queue),
+                "arrivals": self.index_order,
             }
         else:
             info = {
@@ -218,6 +224,8 @@ class MMDelivery(gym.Env):
                 "utility": 0,
                 "mode": None,
                 "region":None,
+                "Queue_Length": len(self.queue),
+                "arrivals": self.index_order,
             }
 
         return info
@@ -255,6 +263,8 @@ class MMDelivery(gym.Env):
         self.chosen_mode = None
         self.chosen_reg = None
         self.chosen_ord = False
+        self.num_arrivals = 0
+
         info = self._get_info()
 
         if self.render_mode == "human":
@@ -290,6 +300,21 @@ class MMDelivery(gym.Env):
             # No orders in the queue, reset current order
             current_order = np.zeros(3)
             #### if no orders in the queue, we go to the next step with reward 0
+
+            ### update for next step
+            self.num_arrivals = int(self.np_random.poisson(self.rate))  # Poisson arrival process
+            # Append a new order if available and total_processed_orders < max_q
+            if self.num_arrivals > 0:
+                for _ in range(self.num_arrivals):
+                    if self.idx_order < len(self.orders):
+                        self.queue.append(self.orders[self.idx_order].tolist())
+                        self.idx_order += 1
+                # if not available, we are done
+                    else:
+                        terminated = True
+            # Decrease c_l for all couriers by 1 time unit (simulate time passing)
+            self.couriers[:, 2] = np.maximum(0, self.couriers[:, 2] - 1 )
+                    
             self.chosen_ord = False
             self.chosen_latency = 0
             self.chosen_price = 0
