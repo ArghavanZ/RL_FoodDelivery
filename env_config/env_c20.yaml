@@ -1,7 +1,7 @@
 
 env:
   # base parms
-  name: 'drone_n1'
+  name: 'drone_2'
   
   # env specific params 
   net: 'SiouxFalls'  # The transportation network to use, 'SiouxFalls'

@@ -19,10 +19,10 @@ from stable_baselines3.common.utils import set_random_seed
 from stable_baselines3.common.evaluation import evaluate_policy
 from stable_baselines3.common.monitor import Monitor
 from wandb.integration.sb3 import WandbCallback
+
 # import internal packages
-#from drone_rl.multi_delivery_1d.envs.drone_1d import MMDelivery, make_env
-from drone_rl.multi_delivery_1d.envs.drone_n1 import MMDelivery, make_env
-from drone_rl.multi_delivery_1d.utils import net
+from RL_FoodDelivery.env.drone_delivery import MMDelivery, make_env
+from  RL_FoodDelivery.utils import net
 #----------------------#
 #----------------------#
 
@@ -148,16 +148,23 @@ def policy_poor(obs, info, env):
     l_car, l_drone = obs["Latencies"] # assume shape of problem
     action = np.zeros(obs["Latencies"].shape)
     # normally we return max, max as before
-    re = int(obs["o_d"][0])
-    is_poor = any(x == re for x in [0,1,2,5,6,11,12,19,20,23])
-    # if serving poor and car is slower than drone
-    if is_poor and (l_car>l_drone):
-        alpha = env.unwrapped.vot_means[0]
-        # then we lower price of car just barely enough
-        action[0] += alpha*(l_car-l_drone)
-        # small correction
-        action[0] += 0.01
-    return action
+    re = int(obs["o_d"][0])-1
+    if re < 0 :
+       
+        # if no order, we do not change the action
+        return action
+    
+
+    else:
+        is_poor = any(x == re for x in [0,1,2,5,6,11,12,19,20,23])
+        # if serving poor and car is slower than drone
+        if is_poor and (l_car>l_drone):
+            alpha = env.unwrapped.vot_means[re]
+            # then we lower price of car just barely enough
+            action[0] += alpha*(l_car-l_drone)
+            # small correction
+            action[0] += 0.01
+        return action
 
 
 def policy_best(obs, info, env):
@@ -170,20 +177,25 @@ def policy_best(obs, info, env):
     # find the current order region
     re = int(obs["o_d"][0])
 
+    if re == 0:
+        # if no order, we do not change the action
+        return action
+    
+    else:
     # mean VOT for the region
-    alpha = env.unwrapped.vot_means[re]
-    # cost per unit of couriers
-    eta = env.unwrapped.etas
+        alpha = env.unwrapped.vot_means[re-1]
+        # cost per unit of couriers
+        eta = env.unwrapped.etas
 
-    # then we lower price a bit more than enough so that both couriers are feasible (almost same utility but a bit smaller for car since 0.01*l_c > 0.01*l_d)
-    action += (alpha+0.01)*np.array([l_car,l_drone])
-    # small correction (maybe not?)
-    if (l_car>l_drone):
-        action[1] += 0.02
-    # check if we are having a positive reward
-    if np.any(action+eta*np.array([l_car,l_drone]) > tau_max*np.ones(obs["Latencies"].shape)):
-        action = tau_max*np.ones(obs["Latencies"].shape) - eta*np.array([l_car,l_drone])
-    return action
+        # then we lower price a bit more than enough so that both couriers are feasible (almost same utility but a bit smaller for car since 0.01*l_c > 0.01*l_d)
+        action += (alpha+0.01)*np.array([l_car,l_drone])
+        # small correction (maybe not?)
+        if (l_car>l_drone):
+            action[1] += 0.02
+        # check if we are having a positive reward
+        if np.any(action+eta*np.array([l_car,l_drone]) > tau_max*np.ones(obs["Latencies"].shape)):
+            action = tau_max*np.ones(obs["Latencies"].shape) - eta*np.array([l_car,l_drone])
+        return action
 
 
 def policy_RL(obs, info, env):
@@ -231,7 +243,7 @@ def get_env_cfg():
     '''
     loads environment param cfg from yaml file path and params provided by args
     '''
-    with open(f"{ROOT}/{ARGS.P_path}", 'r') as f:
+    with open(f"{ROOT}/{ARGS.C_path}", 'r') as f:
         env_cfg = yaml.load(f, Loader=yaml.SafeLoader)
 
 
@@ -363,11 +375,11 @@ def main():
     return None
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--save_path', type=str, default='eval.txt', help="location where evaluation will be saved")
-    parser.add_argument('--model_dir', type=str, default='results/drone_n1/PPO/default/SF100_hp_5_run_0/models/model.zip', help="location of model to evaluate")
-    parser.add_argument('--P_path', type=str, default='env_param/SF100.yaml', help="location of yaml config file to use for environment parameters, relative to ROOT dir of project")
-    parser.add_argument('--run_name', type=str, default='eval_SF100_hp5_r0', help="all runs saved to the wandb project will use run_name for identification")
+   parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument('--save_path', type=str, default='eval/eval_env_c20_H1_r0/eval.txt', help="location where evaluation will be saved")
+    parser.add_argument('--model_dir', type=str, default='results/drone_2/PPO/env_c20_H1_run_0/models/model.zip', help="location of model to evaluate")
+    parser.add_argument('--C_path', type=str, default='env_config/env_c20.yaml', help="location of yaml config file to use for environment parameters, relative to ROOT dir of project")
+    parser.add_argument('--run_name', type=str, default='eval_env_c20_H1_r0', help="all runs saved to the wandb project will use run_name for identification")
     
     ARGS = parser.parse_args()
     print(ARGS)
