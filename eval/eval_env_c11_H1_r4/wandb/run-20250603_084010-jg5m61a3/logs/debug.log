@@ -1,0 +1,77 @@
+2025-06-03 08:40:10,265 INFO    MainThread:364177 [wandb_setup.py:_flush():68] Current SDK version is 0.19.1
+2025-06-03 08:40:10,266 INFO    MainThread:364177 [wandb_setup.py:_flush():68] Configure stats pid to 364177
+2025-06-03 08:40:10,266 INFO    MainThread:364177 [wandb_setup.py:_flush():68] Loading settings from /home/arghavan/.config/wandb/settings
+2025-06-03 08:40:10,266 INFO    MainThread:364177 [wandb_setup.py:_flush():68] Loading settings from /home/arghavan/2025/RL_FoodDelivery/wandb/settings
+2025-06-03 08:40:10,266 INFO    MainThread:364177 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-06-03 08:40:10,266 INFO    MainThread:364177 [wandb_init.py:_log_setup():528] Logging user logs to eval/eval_env_c11_H1_r4/wandb/run-20250603_084010-jg5m61a3/logs/debug.log
+2025-06-03 08:40:10,267 INFO    MainThread:364177 [wandb_init.py:_log_setup():529] Logging internal logs to eval/eval_env_c11_H1_r4/wandb/run-20250603_084010-jg5m61a3/logs/debug-internal.log
+2025-06-03 08:40:10,267 INFO    MainThread:364177 [wandb_init.py:init():644] calling init triggers
+2025-06-03 08:40:10,269 INFO    MainThread:364177 [wandb_init.py:init():650] wandb.init called with sweep_config: {}
+config: {'env': {'name': 'drone_1', 'net': 'SiouxFalls', 'n_nodes': 24, 'n_links': 76, 'T_T': array([[[ 0.        ,  0.        ],
+        [ 6.        ,  5.4       ],
+        [ 4.        ,  1.4       ],
+        ...,
+        [20.        ,  8.32586332],
+        [17.        ,  7.76659514],
+        [15.        ,  9.33809402]],
+
+       [[ 6.        ,  5.4       ],
+        [ 0.        ,  0.        ],
+        [10.        ,  5.57853027],
+        ...,
+        [21.        ,  7.85875308],
+        [23.        ,  8.49705831],
+        [21.        ,  9.95389371]],
+
+       [[ 4.        ,  1.4       ],
+        [10.        ,  5.57853027],
+        [ 0.        ,  0.        ],
+        ...,
+        [16.        ,  7.07106781],
+        [13.        ,  6.40312424],
+        [11.        ,  7.96241169]],
+
+       ...,
+
+       [[20.        ,  8.32586332],
+        [21.        ,  7.85875308],
+        [16.        ,  7.07106781],
+        ...,
+        [ 0.        ,  0.        ],
+        [ 4.        ,  1.8       ],
+        [ 5.        ,  2.40831892]],
+
+       [[17.        ,  7.76659514],
+        [23.        ,  8.49705831],
+        [13.        ,  6.40312424],
+        ...,
+        [ 4.        ,  1.8       ],
+        [ 0.        ,  0.        ],
+        [ 2.        ,  1.6       ]],
+
+       [[15.        ,  9.33809402],
+        [21.        ,  9.95389371],
+        [11.        ,  7.96241169],
+        ...,
+        [ 5.        ,  2.40831892],
+        [ 2.        ,  1.6       ],
+        [ 0.        ,  0.        ]]], shape=(24, 24, 2)), 'max_q': 2000, 'len_q': 2, 'max_exp': 3, 'rate': 2, 'modalities': ['car', 'drone'], 'num_couriers': [15, 10], 'courier_init': [-1, 40], 'drone_speed': 0.5, 'rates_p': [0, 0, 0, 0, 0, 0, 0, 0, 0.2, 0.2, 0.2, 0, 0, 0, 0, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0], 'rates_d': [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.01, 0.01, 0.01, 0.05, 0.05, 0.05, 0.05, 0.01, 0.01, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05], 'max_lat': 70.0, 'max_tau': 30.0, 'max_utility': 35.0, 'vot_means': [0.8, 0.8, 0.8, 1.2, 1.2, 0.8, 0.8, 1.2, 5, 5, 5, 0.8, 0.8, 1.2, 1.2, 5, 5, 1.2, 1.2, 0.8, 0.8, 1.2, 1.2, 0.8], 'vot_stds': [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01], 'etas': [1, 2]}}
+2025-06-03 08:40:10,269 INFO    MainThread:364177 [wandb_init.py:init():680] starting backend
+2025-06-03 08:40:10,270 INFO    MainThread:364177 [wandb_init.py:init():684] sending inform_init request
+2025-06-03 08:40:10,279 INFO    MainThread:364177 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-06-03 08:40:10,279 INFO    MainThread:364177 [wandb_init.py:init():697] backend started and connected
+2025-06-03 08:40:10,285 INFO    MainThread:364177 [wandb_init.py:init():790] updated telemetry
+2025-06-03 08:40:10,297 INFO    MainThread:364177 [wandb_init.py:init():822] communicating run to backend with 90.0 second timeout
+2025-06-03 08:40:10,659 INFO    MainThread:364177 [wandb_init.py:init():874] starting run threads in backend
+2025-06-03 08:40:10,776 INFO    MainThread:364177 [wandb_run.py:_console_start():2374] atexit reg
+2025-06-03 08:40:10,776 INFO    MainThread:364177 [wandb_run.py:_redirect():2224] redirect: wrap_raw
+2025-06-03 08:40:10,776 INFO    MainThread:364177 [wandb_run.py:_redirect():2289] Wrapping output streams.
+2025-06-03 08:40:10,776 INFO    MainThread:364177 [wandb_run.py:_redirect():2314] Redirects installed.
+2025-06-03 08:40:10,778 INFO    MainThread:364177 [wandb_init.py:init():916] run started, returning control to user process
+2025-06-03 08:40:19,866 INFO    MainThread:364177 [wandb_run.py:_finish():2100] finishing run Zibaie_RL/RL_FoodDElivery/jg5m61a3
+2025-06-03 08:40:19,867 INFO    MainThread:364177 [wandb_run.py:_atexit_cleanup():2339] got exitcode: 0
+2025-06-03 08:40:19,867 INFO    MainThread:364177 [wandb_run.py:_restore():2321] restore
+2025-06-03 08:40:19,867 INFO    MainThread:364177 [wandb_run.py:_restore():2327] restore done
+2025-06-03 08:40:22,067 INFO    MainThread:364177 [wandb_run.py:_footer_history_summary_info():3892] rendering history
+2025-06-03 08:40:22,070 INFO    MainThread:364177 [wandb_run.py:_footer_history_summary_info():3924] rendering summary
+2025-06-03 08:40:22,083 INFO    MainThread:364177 [wandb_run.py:_footer_sync_info():3853] logging synced files

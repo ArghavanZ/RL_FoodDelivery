@@ -1,0 +1,19 @@
+{"time":"2025-06-02T14:21:15.744284717-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-02T14:21:15.744327447-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_2/PPO/env_c20_H1_run_2/wandb/run-20250602_142115-mpakk7ch/logs/debug-core.log"}
+{"time":"2025-06-02T14:21:15.868573477-07:00","level":"INFO","msg":"created new stream","id":"mpakk7ch"}
+{"time":"2025-06-02T14:21:15.868617198-07:00","level":"INFO","msg":"stream: started","id":"mpakk7ch"}
+{"time":"2025-06-02T14:21:15.868719159-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"mpakk7ch"}
+{"time":"2025-06-02T14:21:15.868747181-07:00","level":"INFO","msg":"sender: started","stream_id":"mpakk7ch"}
+{"time":"2025-06-02T14:21:15.868770104-07:00","level":"INFO","msg":"handler: started","stream_id":"mpakk7ch"}
+{"time":"2025-06-02T14:21:16.065277992-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T14:21:30.808743525-07:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-06-02T14:54:16.486181982-07:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/Zibaie_RL/RL_FoodDElivery/mpakk7ch/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-06-02T16:04:58.256219723-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T16:04:58.257105824-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T16:04:59.216419946-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T16:04:59.257380927-07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 63376-63466, summary, console lines 107282-107413","runtime_seconds":0.040183328}],"total_operations":1}}
+{"time":"2025-06-02T16:05:00.373266645-07:00","level":"INFO","msg":"stream: closing","id":"mpakk7ch"}
+{"time":"2025-06-02T16:05:00.373309635-07:00","level":"INFO","msg":"handler: closed","stream_id":"mpakk7ch"}
+{"time":"2025-06-02T16:05:00.373331143-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"mpakk7ch"}
+{"time":"2025-06-02T16:05:00.373414477-07:00","level":"INFO","msg":"sender: closed","stream_id":"mpakk7ch"}
+{"time":"2025-06-02T16:05:00.373487125-07:00","level":"INFO","msg":"stream: closed","id":"mpakk7ch"}

@@ -1,0 +1,16 @@
+{"time":"2025-06-02T10:43:38.183638309-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-02T10:43:38.183682798-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_0/wandb/run-20250602_104338-y63j7a87/logs/debug-core.log"}
+{"time":"2025-06-02T10:43:38.309766579-07:00","level":"INFO","msg":"created new stream","id":"y63j7a87"}
+{"time":"2025-06-02T10:43:38.309831553-07:00","level":"INFO","msg":"stream: started","id":"y63j7a87"}
+{"time":"2025-06-02T10:43:38.309990961-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"y63j7a87"}
+{"time":"2025-06-02T10:43:38.310008207-07:00","level":"INFO","msg":"handler: started","stream_id":"y63j7a87"}
+{"time":"2025-06-02T10:43:38.310171043-07:00","level":"INFO","msg":"sender: started","stream_id":"y63j7a87"}
+{"time":"2025-06-02T10:43:38.577613697-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T10:43:42.608029831-07:00","level":"INFO","msg":"stream: closing","id":"y63j7a87"}
+{"time":"2025-06-02T10:43:42.608103487-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T10:43:42.609310087-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T10:43:43.034734128-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T10:43:43.189398233-07:00","level":"INFO","msg":"handler: closed","stream_id":"y63j7a87"}
+{"time":"2025-06-02T10:43:43.189491285-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"y63j7a87"}
+{"time":"2025-06-02T10:43:43.189526458-07:00","level":"INFO","msg":"sender: closed","stream_id":"y63j7a87"}
+{"time":"2025-06-02T10:43:43.189651515-07:00","level":"INFO","msg":"stream: closed","id":"y63j7a87"}

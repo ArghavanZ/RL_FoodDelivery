@@ -1,0 +1,2 @@
+/home/arghavan/2025/RL_FoodDelivery/scripts/eval1.py:134: RuntimeWarning: invalid value encountered in scalar divide
+  [reg_ord[idx_reg], reg_lat[idx_reg]/reg_ord[idx_reg], reg_tau[idx_reg]/reg_ord[idx_reg], reg_uti[idx_reg]/reg_ord[idx_reg],])

@@ -1,0 +1,18 @@
+{"time":"2025-06-02T18:31:09.888157203-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-02T18:31:09.888197025-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_4/wandb/run-20250602_183109-hypp8s1r/logs/debug-core.log"}
+{"time":"2025-06-02T18:31:10.0131909-07:00","level":"INFO","msg":"created new stream","id":"hypp8s1r"}
+{"time":"2025-06-02T18:31:10.013265229-07:00","level":"INFO","msg":"stream: started","id":"hypp8s1r"}
+{"time":"2025-06-02T18:31:10.013315507-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"hypp8s1r"}
+{"time":"2025-06-02T18:31:10.013389131-07:00","level":"INFO","msg":"handler: started","stream_id":"hypp8s1r"}
+{"time":"2025-06-02T18:31:10.013453404-07:00","level":"INFO","msg":"sender: started","stream_id":"hypp8s1r"}
+{"time":"2025-06-02T18:31:10.278897779-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T18:31:24.80851911-07:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-06-02T20:41:55.439291429-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T20:41:55.440632982-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T20:41:56.183881377-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T20:41:56.291415391-07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-06-02T20:41:57.317723229-07:00","level":"INFO","msg":"stream: closing","id":"hypp8s1r"}
+{"time":"2025-06-02T20:41:57.317779896-07:00","level":"INFO","msg":"handler: closed","stream_id":"hypp8s1r"}
+{"time":"2025-06-02T20:41:57.317806319-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hypp8s1r"}
+{"time":"2025-06-02T20:41:57.317887372-07:00","level":"INFO","msg":"sender: closed","stream_id":"hypp8s1r"}
+{"time":"2025-06-02T20:41:57.317974105-07:00","level":"INFO","msg":"stream: closed","id":"hypp8s1r"}

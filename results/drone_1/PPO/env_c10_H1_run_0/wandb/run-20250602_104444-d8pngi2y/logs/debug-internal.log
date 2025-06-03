@@ -1,0 +1,18 @@
+{"time":"2025-06-02T10:44:44.273121813-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-02T10:44:44.273162501-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_0/wandb/run-20250602_104444-d8pngi2y/logs/debug-core.log"}
+{"time":"2025-06-02T10:44:44.402635368-07:00","level":"INFO","msg":"created new stream","id":"d8pngi2y"}
+{"time":"2025-06-02T10:44:44.402754134-07:00","level":"INFO","msg":"stream: started","id":"d8pngi2y"}
+{"time":"2025-06-02T10:44:44.402855187-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"d8pngi2y"}
+{"time":"2025-06-02T10:44:44.40292601-07:00","level":"INFO","msg":"sender: started","stream_id":"d8pngi2y"}
+{"time":"2025-06-02T10:44:44.403011048-07:00","level":"INFO","msg":"handler: started","stream_id":"d8pngi2y"}
+{"time":"2025-06-02T10:44:44.653915748-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T10:44:59.714042323-07:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-06-02T12:27:26.321613008-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T12:27:26.322995291-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T12:27:27.32278167-07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading model.zip","runtime_seconds":0.168963402,"progress":"689.6KB/689.6KB"},{"desc":"uploading results/drone_1/PPO/env_c10_H1_run_0/tb/PPO_1/events.out.tfevents.1748886289.zapdos.1370091.0","runtime_seconds":0.168945145,"progress":"3.5MB/3.5MB"}],"total_operations":2}}
+{"time":"2025-06-02T12:27:27.438387989-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T12:27:28.612837113-07:00","level":"INFO","msg":"stream: closing","id":"d8pngi2y"}
+{"time":"2025-06-02T12:27:28.612889528-07:00","level":"INFO","msg":"handler: closed","stream_id":"d8pngi2y"}
+{"time":"2025-06-02T12:27:28.61291315-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"d8pngi2y"}
+{"time":"2025-06-02T12:27:28.612993651-07:00","level":"INFO","msg":"sender: closed","stream_id":"d8pngi2y"}
+{"time":"2025-06-02T12:27:28.613056016-07:00","level":"INFO","msg":"stream: closed","id":"d8pngi2y"}

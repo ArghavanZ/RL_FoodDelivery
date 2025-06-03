@@ -1,0 +1,18 @@
+{"time":"2025-06-03T01:13:56.644181215-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-03T01:13:56.644224929-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c11_H1_run_2/wandb/run-20250603_011356-0kn9lr9o/logs/debug-core.log"}
+{"time":"2025-06-03T01:13:56.768623609-07:00","level":"INFO","msg":"created new stream","id":"0kn9lr9o"}
+{"time":"2025-06-03T01:13:56.768687329-07:00","level":"INFO","msg":"stream: started","id":"0kn9lr9o"}
+{"time":"2025-06-03T01:13:56.768824782-07:00","level":"INFO","msg":"sender: started","stream_id":"0kn9lr9o"}
+{"time":"2025-06-03T01:13:56.768867334-07:00","level":"INFO","msg":"handler: started","stream_id":"0kn9lr9o"}
+{"time":"2025-06-03T01:13:56.768792395-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"0kn9lr9o"}
+{"time":"2025-06-03T01:13:56.954759982-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-03T01:14:11.120582363-07:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-06-03T02:55:34.135798558-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-03T02:55:34.136980412-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-03T02:55:35.04007355-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-03T02:55:35.136723286-07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 63363-63466, summary, console lines 107304-107413","runtime_seconds":0.095787698}],"total_operations":1}}
+{"time":"2025-06-03T02:55:36.200712469-07:00","level":"INFO","msg":"stream: closing","id":"0kn9lr9o"}
+{"time":"2025-06-03T02:55:36.200760932-07:00","level":"INFO","msg":"handler: closed","stream_id":"0kn9lr9o"}
+{"time":"2025-06-03T02:55:36.200795169-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"0kn9lr9o"}
+{"time":"2025-06-03T02:55:36.200861266-07:00","level":"INFO","msg":"sender: closed","stream_id":"0kn9lr9o"}
+{"time":"2025-06-03T02:55:36.200953635-07:00","level":"INFO","msg":"stream: closed","id":"0kn9lr9o"}

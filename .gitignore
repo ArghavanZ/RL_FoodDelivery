@@ -1,1 +1,4 @@
-src/RL_FoodDelivery/__pycache__
+src/RL_FoodDelivery/env/__pycache__
+src/RL_FoodDelivery/utils/__pycache__
+results/ 
+eval/

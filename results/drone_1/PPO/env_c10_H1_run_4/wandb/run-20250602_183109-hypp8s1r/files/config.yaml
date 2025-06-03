@@ -1,0 +1,478 @@
+_current_progress_remaining:
+    value: 1
+_custom_logger:
+    value: "False"
+_episode_num:
+    value: 0
+_last_episode_starts:
+    value: '[ True  True  True  True  True  True  True  True]'
+_last_obs:
+    value: |-
+        OrderedDict([('Latencies', array([[0.2740966 , 0.8728888 ],
+               [5.366989  , 8.379419  ],
+               [0.3128626 , 3.1007311 ],
+               [3.5020158 , 4.6440034 ],
+               [1.010595  , 0.        ],
+               [1.8957504 , 3.1090043 ],
+               [1.6489824 , 0.13914101],
+               [0.        , 3.8993378 ]], dtype=float32)), ('c_d', array([[10, 10, 14, 20, 22,  9, 23,  1, 11,  4,  1, 22,  2,  3, 12, 18,
+                 5, 11, 18, 17, 12, 11,  3, 18, 22],
+               [ 2, 11, 14, 23,  7,  4, 10,  8, 21,  2, 16, 17, 19,  8, 22, 24,
+                 2, 17,  8, 19,  7,  7, 21, 23, 22],
+               [11, 20, 23, 19, 21, 24, 18, 19, 23,  8,  2,  7,  3, 10, 13, 24,
+                 3, 23,  8, 23, 17, 23, 20, 15,  4],
+               [13, 20,  5, 15, 18,  8,  2, 12,  4,  4, 15, 21, 24, 21, 14,  6,
+                23, 14,  6, 19, 22, 22, 21,  4,  9],
+               [21, 24, 18,  6, 20,  8, 17, 23, 18,  7, 20, 10,  4,  9, 22, 12,
+                 7,  4,  6, 12, 21,  3,  4, 19, 13],
+               [ 5,  3, 16, 22, 12, 10, 19, 16, 12,  1, 11,  8,  6,  9, 15, 15,
+                 1,  1,  4, 16, 19,  1, 14, 13,  2],
+               [20,  9, 19,  9, 15,  2, 24, 12,  8, 19, 14,  9,  2, 15,  8, 21,
+                 1, 13, 24,  6,  8,  1, 15,  2,  8],
+               [22,  7, 16, 22, 13,  2,  1,  8, 11, 16, 11, 19, 15, 19, 19,  7,
+                12,  2, 20,  9, 18,  6,  3, 23, 11]], dtype=int32)), ('c_j', array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1]], dtype=int32)), ('c_l', array([[ 0.2740966 ,  3.7671635 ,  4.723176  , 16.183186  , 10.400163  ,
+                31.7114    ,  6.8445    , 27.639961  ,  8.427294  , 22.752491  ,
+                20.053703  , 27.08792   , 26.848253  ,  8.943825  , 33.33067   ,
+                21.69526   , 13.955409  ,  0.8728888 , 31.32547   , 27.46566   ,
+                15.975137  , 36.405476  , 19.376003  , 37.29149   ,  7.1486206 ],
+               [24.27491   , 28.486301  , 10.106884  , 26.344877  , 35.90443   ,
+                26.689306  ,  5.366989  , 10.170748  ,  7.0160227 , 21.301802  ,
+                14.110769  ,  7.149891  , 14.127565  , 20.293709  , 34.448967  ,
+                17.393536  , 12.369724  , 12.846238  , 13.1453705 ,  9.916568  ,
+                11.921649  , 26.88367   , 23.129576  ,  8.379419  , 34.753067  ],
+               [16.02563   ,  0.8217563 , 33.133865  , 18.664917  ,  0.3128626 ,
+                16.08672   , 33.287605  , 31.754274  ,  0.5583635 , 29.270342  ,
+                26.165318  , 39.1797    ,  6.7459197 , 11.462417  , 27.44145   ,
+                22.294373  ,  5.4483123 , 13.44592   , 15.64301   , 21.683334  ,
+                 6.658188  , 13.904304  , 26.044338  , 21.804245  ,  3.1007311 ],
+               [ 8.598566  , 21.14407   , 12.524746  , 37.10673   , 12.373824  ,
+                27.396921  , 28.716694  ,  5.2679796 , 29.178114  , 14.930243  ,
+                 8.57334   ,  8.849806  , 13.829807  ,  3.5020158 , 30.551996  ,
+                 9.883463  , 33.219147  , 24.027334  , 39.054504  , 11.267653  ,
+                21.593542  ,  7.2580295 , 12.443704  ,  4.6440034 , 21.854916  ],
+               [26.64787   , 11.481195  ,  4.6102495 , 29.452831  , 31.545097  ,
+                23.68782   ,  1.010595  , 31.30001   , 39.467594  , 31.307835  ,
+                32.481625  , 13.210889  , 25.179964  , 18.733591  , 10.57035   ,
+                18.860271  ,  0.        , 32.61881   ,  5.7010407 ,  6.977801  ,
+                 4.966952  , 16.168278  , 33.89643   , 29.829899  , 23.961912  ],
+               [ 5.4303813 , 27.447899  , 22.507256  , 26.00346   ,  3.1996233 ,
+                17.63536   , 37.793083  , 20.424496  , 32.9036    , 38.767323  ,
+                 1.8957504 ,  3.0544102 , 20.364813  , 33.433468  , 18.07624   ,
+                 3.1090043 , 27.853533  , 27.796854  , 29.072098  , 16.528172  ,
+                15.6146145 ,  9.130807  , 11.972284  ,  7.006512  ,  9.55296   ],
+               [ 3.067056  , 36.49985   , 25.090666  , 25.582783  , 29.924255  ,
+                38.16011   , 25.951578  , 18.333656  ,  7.1137686 , 38.33674   ,
+                35.841225  ,  3.2383394 ,  1.6489824 , 38.46969   , 14.698654  ,
+                16.81506   ,  0.13914101,  9.665383  , 35.17236   , 35.08038   ,
+                29.624367  ,  9.944271  ,  6.820069  , 11.883097  , 35.1956    ],
+               [ 8.004692  , 30.032402  ,  0.        , 20.716095  ,  0.4464377 ,
+                39.306095  , 20.882538  , 36.021774  , 13.32444   , 27.785452  ,
+                25.471102  , 14.851349  , 14.308477  , 13.847305  , 38.930805  ,
+                 3.8993378 , 10.982359  ,  4.064794  , 37.481895  , 37.861908  ,
+                11.118642  , 15.488629  ,  9.865699  , 30.266302  , 35.057846  ]],
+              dtype=float32)), ('o_d', array([[0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0]], dtype=int32)), ('o_l', array([[0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0]], dtype=int32)), ('o_p', array([[0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0]], dtype=int32))])
+_last_original_obs:
+    value: None
+_logger:
+    value: <stable_baselines3.common.logger.Logger object at 0x7f0e29d505d0>
+_n_updates:
+    value: 0
+_num_timesteps_at_start:
+    value: 0
+_stats_window_size:
+    value: 100
+_total_timesteps:
+    value: 5000000
+_vec_normalize_env:
+    value: None
+_wandb:
+    value:
+        cli_version: 0.19.1
+        m: []
+        python_version: 3.11.11
+        t:
+            "1":
+                - 1
+                - 55
+            "2":
+                - 1
+                - 55
+            "3":
+                - 2
+                - 3
+                - 13
+                - 16
+                - 22
+                - 23
+                - 34
+                - 35
+                - 55
+            "4": 3.11.11
+            "5": 0.19.1
+            "8":
+                - 5
+            "12": 0.19.1
+            "13": linux-x86_64
+action_noise:
+    value: None
+action_space:
+    value: Box(0.0, 30.0, (2,), float32)
+algo:
+    value:
+        log_interval: 1
+        name: default
+        total_timesteps: 5000000
+batch_size:
+    value: 128
+clip_range:
+    value: <function get_schedule_fn.<locals>.<lambda> at 0x7f0e1c1137e0>
+clip_range_vf:
+    value: None
+device:
+    value: cpu
+ent_coef:
+    value: 0.001
+env:
+    value:
+        T_T: |-
+            [[[ 0.          0.        ]
+              [ 6.          5.4       ]
+              [ 4.          1.4       ]
+              ...
+              [20.          8.32586332]
+              [17.          7.76659514]
+              [15.          9.33809402]]
+
+             [[ 6.          5.4       ]
+              [ 0.          0.        ]
+              [10.          5.57853027]
+              ...
+              [21.          7.85875308]
+              [23.          8.49705831]
+              [21.          9.95389371]]
+
+             [[ 4.          1.4       ]
+              [10.          5.57853027]
+              [ 0.          0.        ]
+              ...
+              [16.          7.07106781]
+              [13.          6.40312424]
+              [11.          7.96241169]]
+
+             ...
+
+             [[20.          8.32586332]
+              [21.          7.85875308]
+              [16.          7.07106781]
+              ...
+              [ 0.          0.        ]
+              [ 4.          1.8       ]
+              [ 5.          2.40831892]]
+
+             [[17.          7.76659514]
+              [23.          8.49705831]
+              [13.          6.40312424]
+              ...
+              [ 4.          1.8       ]
+              [ 0.          0.        ]
+              [ 2.          1.6       ]]
+
+             [[15.          9.33809402]
+              [21.          9.95389371]
+              [11.          7.96241169]
+              ...
+              [ 5.          2.40831892]
+              [ 2.          1.6       ]
+              [ 0.          0.        ]]]
+        courier_init:
+            - -1
+            - 40
+        drone_speed: 0.5
+        etas:
+            - 1
+            - 2
+        len_q: 2
+        max_exp: 2
+        max_lat: 70
+        max_q: 2000
+        max_tau: 30
+        max_utility: 35
+        modalities:
+            - car
+            - drone
+        n_links: 76
+        n_nodes: 24
+        name: drone_1
+        net: SiouxFalls
+        num_couriers:
+            - 15
+            - 10
+        rate: 2
+        rates_d:
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.01
+            - 0.01
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+        rates_p:
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0.2
+            - 0.2
+            - 0.2
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0.2
+            - 0.2
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+        vot_means:
+            - 0.8
+            - 0.8
+            - 0.8
+            - 1.2
+            - 1.2
+            - 0.8
+            - 0.8
+            - 1.2
+            - 5
+            - 5
+            - 5
+            - 0.8
+            - 0.8
+            - 1.2
+            - 1.2
+            - 5
+            - 5
+            - 1.2
+            - 1.2
+            - 0.8
+            - 0.8
+            - 1.2
+            - 1.2
+            - 0.8
+        vot_stds:
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+env_setup:
+    value:
+        num_proc: 8
+        timelimit: 200
+ep_info_buffer:
+    value: deque([], maxlen=100)
+ep_success_buffer:
+    value: deque([], maxlen=100)
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0001
+lr_schedule:
+    value: <function get_schedule_fn.<locals>.<lambda> at 0x7f0e1c113ec0>
+max_grad_norm:
+    value: 0.5
+model:
+    value:
+        batch_size: 128
+        clip_range: 0.2
+        ent_coef: 0.001
+        gae_lambda: 0.95
+        gamma: 0.99
+        learning_rate: "1e-4"
+        max_grad_norm: 0.5
+        n_epochs: 10
+        n_steps: 1024
+        name: PPO
+        net_arch:
+            - 128
+            - 128
+        policy: MultiInputPolicy
+        tensorboard_log: PPO
+        verbose: 2
+        vf_coef: 0.5
+n_envs:
+    value: 8
+n_epochs:
+    value: 10
+n_steps:
+    value: 128
+normalize_advantage:
+    value: "True"
+num_timesteps:
+    value: 0
+observation_space:
+    value: 'Dict(''Latencies'': Box(0.0, 350.0, (2,), float32), ''c_d'': Box(1, 25, (25,), int32), ''c_j'': Box(0, 2, (25,), int32), ''c_l'': Box(0.0, 350.0, (25,), float32), ''o_d'': Box(0, 25, (2,), int32), ''o_l'': Box(0, 2, (2,), int32), ''o_p'': Box(0, 25, (2,), int32))'
+policy:
+    value: |-
+        MultiInputActorCriticPolicy(
+          (features_extractor): CombinedExtractor(
+            (extractors): ModuleDict(
+              (Latencies): Flatten(start_dim=1, end_dim=-1)
+              (c_d): Flatten(start_dim=1, end_dim=-1)
+              (c_j): Flatten(start_dim=1, end_dim=-1)
+              (c_l): Flatten(start_dim=1, end_dim=-1)
+              (o_d): Flatten(start_dim=1, end_dim=-1)
+              (o_l): Flatten(start_dim=1, end_dim=-1)
+              (o_p): Flatten(start_dim=1, end_dim=-1)
+            )
+          )
+          (pi_features_extractor): CombinedExtractor(
+            (extractors): ModuleDict(
+              (Latencies): Flatten(start_dim=1, end_dim=-1)
+              (c_d): Flatten(start_dim=1, end_dim=-1)
+              (c_j): Flatten(start_dim=1, end_dim=-1)
+              (c_l): Flatten(start_dim=1, end_dim=-1)
+              (o_d): Flatten(start_dim=1, end_dim=-1)
+              (o_l): Flatten(start_dim=1, end_dim=-1)
+              (o_p): Flatten(start_dim=1, end_dim=-1)
+            )
+          )
+          (vf_features_extractor): CombinedExtractor(
+            (extractors): ModuleDict(
+              (Latencies): Flatten(start_dim=1, end_dim=-1)
+              (c_d): Flatten(start_dim=1, end_dim=-1)
+              (c_j): Flatten(start_dim=1, end_dim=-1)
+              (c_l): Flatten(start_dim=1, end_dim=-1)
+              (o_d): Flatten(start_dim=1, end_dim=-1)
+              (o_l): Flatten(start_dim=1, end_dim=-1)
+              (o_p): Flatten(start_dim=1, end_dim=-1)
+            )
+          )
+          (mlp_extractor): MlpExtractor(
+            (policy_net): Sequential(
+              (0): Linear(in_features=83, out_features=128, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=128, out_features=128, bias=True)
+              (3): Tanh()
+            )
+            (value_net): Sequential(
+              (0): Linear(in_features=83, out_features=128, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=128, out_features=128, bias=True)
+              (3): Tanh()
+            )
+          )
+          (action_net): Linear(in_features=128, out_features=2, bias=True)
+          (value_net): Linear(in_features=128, out_features=1, bias=True)
+        )
+policy_class:
+    value: <class 'stable_baselines3.common.policies.MultiInputActorCriticPolicy'>
+policy_kwargs:
+    value: '{''net_arch'': [128, 128]}'
+project_name:
+    value: RL_FoodDElivery
+rollout_buffer:
+    value: <stable_baselines3.common.buffers.DictRolloutBuffer object at 0x7f0e1c147c50>
+rollout_buffer_class:
+    value: <class 'stable_baselines3.common.buffers.DictRolloutBuffer'>
+rollout_buffer_kwargs:
+    value: '{}'
+run_name:
+    value: env_c10_H1_run_4
+sde_sample_freq:
+    value: -1
+seed:
+    value: 4
+start_time:
+    value: 1748914274777885011
+target_kl:
+    value: None
+tensorboard_log:
+    value: /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_4/tb
+use_sde:
+    value: "False"
+verbose:
+    value: 2
+vf_coef:
+    value: 0.5

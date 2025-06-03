@@ -85,24 +85,24 @@ def run_n_evals(env, policy, policy_name,n, seed,  directory , env_cfg):
             "eval/step": t_start,
             "eval/Queue_length": info["Queue_Length"]})
             ep_rew += rew
-            i_reg = info['region']
+            i_reg = info['region'] 
             i_mode = info['mode']
-            if i_reg is not None:
+            if i_reg is not None and i_reg > 0:
                 # acquire rolling stats for ALL
                 ep_uti += info['utility']
                 ep_tau += info['tau']
                 ep_lat += info['lat']
                 ep_ord += info['ord']
                 ep_arrival = info['arrivals']
-                ep_queue = np.max(info['Queue_Length'],ep_queue)
+                ep_queue = max(info['Queue_Length'],ep_queue)
                 ep_modes[i_mode] += 1
                 # acquire rolling stats for REG
-                reg_uti[i_reg] += info['utility']
-                reg_tau[i_reg] += info['tau']
-                reg_lat[i_reg] += info['lat']
-                reg_ord[i_reg] += info['ord']
+                reg_uti[i_reg - 1 ] += info['utility']
+                reg_tau[i_reg - 1] += info['tau']
+                reg_lat[i_reg - 1] += info['lat']
+                reg_ord[i_reg - 1] += info['ord']
                 
-                reg_modes[i_reg, i_mode] += 1
+                reg_modes[i_reg - 1, i_mode] += 1
             # compute util of couriers
             for j_mode in range(M):
                 idx_flag = obs['c_j'] == j_mode

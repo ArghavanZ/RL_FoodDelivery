@@ -1,0 +1,20 @@
+{"time":"2025-06-02T14:24:34.004181868-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-02T14:24:34.004223128-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/wandb/run-20250602_142433-0tufko96/logs/debug-core.log"}
+{"time":"2025-06-02T14:24:34.130293626-07:00","level":"INFO","msg":"created new stream","id":"0tufko96"}
+{"time":"2025-06-02T14:24:34.130419927-07:00","level":"INFO","msg":"stream: started","id":"0tufko96"}
+{"time":"2025-06-02T14:24:34.13053542-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"0tufko96"}
+{"time":"2025-06-02T14:24:34.130621206-07:00","level":"INFO","msg":"sender: started","stream_id":"0tufko96"}
+{"time":"2025-06-02T14:24:34.130759909-07:00","level":"INFO","msg":"handler: started","stream_id":"0tufko96"}
+{"time":"2025-06-02T14:24:34.418353178-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T14:24:48.973494767-07:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-06-02T14:53:49.836337481-07:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/Zibaie_RL/RL_FoodDElivery/0tufko96/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-06-02T14:55:04.563042413-07:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-02T16:10:46.111246119-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T16:10:46.112440288-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T16:10:46.862636306-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T16:10:46.985384318-07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-06-02T16:10:48.014920438-07:00","level":"INFO","msg":"stream: closing","id":"0tufko96"}
+{"time":"2025-06-02T16:10:48.014984617-07:00","level":"INFO","msg":"handler: closed","stream_id":"0tufko96"}
+{"time":"2025-06-02T16:10:48.015012217-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"0tufko96"}
+{"time":"2025-06-02T16:10:48.015039295-07:00","level":"INFO","msg":"sender: closed","stream_id":"0tufko96"}
+{"time":"2025-06-02T16:10:48.015119037-07:00","level":"INFO","msg":"stream: closed","id":"0tufko96"}

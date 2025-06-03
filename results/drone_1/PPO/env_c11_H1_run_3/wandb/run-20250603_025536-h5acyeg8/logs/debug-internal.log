@@ -1,0 +1,18 @@
+{"time":"2025-06-03T02:55:36.248147993-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-03T02:55:36.248189195-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c11_H1_run_3/wandb/run-20250603_025536-h5acyeg8/logs/debug-core.log"}
+{"time":"2025-06-03T02:55:36.373306951-07:00","level":"INFO","msg":"created new stream","id":"h5acyeg8"}
+{"time":"2025-06-03T02:55:36.373375835-07:00","level":"INFO","msg":"stream: started","id":"h5acyeg8"}
+{"time":"2025-06-03T02:55:36.373483615-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"h5acyeg8"}
+{"time":"2025-06-03T02:55:36.373562265-07:00","level":"INFO","msg":"handler: started","stream_id":"h5acyeg8"}
+{"time":"2025-06-03T02:55:36.373649365-07:00","level":"INFO","msg":"sender: started","stream_id":"h5acyeg8"}
+{"time":"2025-06-03T02:55:36.582230027-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-03T02:55:50.698508286-07:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-06-03T04:37:33.378185956-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-03T04:37:33.379454084-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-03T04:37:34.379158505-07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading results/drone_1/PPO/env_c11_H1_run_3/tb/PPO_1/events.out.tfevents.1748944540.zapdos.2150011.3","runtime_seconds":0.23543631,"progress":"3.5MB/3.5MB"},{"desc":"uploading model.zip","runtime_seconds":0.235418239,"progress":"689.4KB/689.4KB"}],"total_operations":2}}
+{"time":"2025-06-03T04:37:34.407800375-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-03T04:37:35.548828763-07:00","level":"INFO","msg":"stream: closing","id":"h5acyeg8"}
+{"time":"2025-06-03T04:37:35.548868954-07:00","level":"INFO","msg":"handler: closed","stream_id":"h5acyeg8"}
+{"time":"2025-06-03T04:37:35.548890125-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"h5acyeg8"}
+{"time":"2025-06-03T04:37:35.54896989-07:00","level":"INFO","msg":"sender: closed","stream_id":"h5acyeg8"}
+{"time":"2025-06-03T04:37:35.549036007-07:00","level":"INFO","msg":"stream: closed","id":"h5acyeg8"}

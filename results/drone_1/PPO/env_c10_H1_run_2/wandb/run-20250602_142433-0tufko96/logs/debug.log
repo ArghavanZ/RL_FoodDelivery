@@ -1,0 +1,705 @@
+2025-06-02 14:24:33,970 INFO    MainThread:1370091 [wandb_setup.py:_flush():68] Current SDK version is 0.19.1
+2025-06-02 14:24:33,970 INFO    MainThread:1370091 [wandb_setup.py:_flush():68] Configure stats pid to 1370091
+2025-06-02 14:24:33,970 INFO    MainThread:1370091 [wandb_setup.py:_flush():68] Loading settings from /home/arghavan/.config/wandb/settings
+2025-06-02 14:24:33,970 INFO    MainThread:1370091 [wandb_setup.py:_flush():68] Loading settings from /home/arghavan/2025/RL_FoodDelivery/wandb/settings
+2025-06-02 14:24:33,970 INFO    MainThread:1370091 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-06-02 14:24:33,970 INFO    MainThread:1370091 [wandb_init.py:_log_setup():528] Logging user logs to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/wandb/run-20250602_142433-0tufko96/logs/debug.log
+2025-06-02 14:24:33,970 INFO    MainThread:1370091 [wandb_init.py:_log_setup():529] Logging internal logs to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/wandb/run-20250602_142433-0tufko96/logs/debug-internal.log
+2025-06-02 14:24:33,970 INFO    MainThread:1370091 [wandb_init.py:init():644] calling init triggers
+2025-06-02 14:24:33,971 INFO    MainThread:1370091 [wandb_init.py:init():650] wandb.init called with sweep_config: {}
+config: {'env': {'name': 'drone_1', 'net': 'SiouxFalls', 'n_nodes': 24, 'n_links': 76, 'T_T': array([[[ 0.        ,  0.        ],
+        [ 6.        ,  5.4       ],
+        [ 4.        ,  1.4       ],
+        ...,
+        [20.        ,  8.32586332],
+        [17.        ,  7.76659514],
+        [15.        ,  9.33809402]],
+
+       [[ 6.        ,  5.4       ],
+        [ 0.        ,  0.        ],
+        [10.        ,  5.57853027],
+        ...,
+        [21.        ,  7.85875308],
+        [23.        ,  8.49705831],
+        [21.        ,  9.95389371]],
+
+       [[ 4.        ,  1.4       ],
+        [10.        ,  5.57853027],
+        [ 0.        ,  0.        ],
+        ...,
+        [16.        ,  7.07106781],
+        [13.        ,  6.40312424],
+        [11.        ,  7.96241169]],
+
+       ...,
+
+       [[20.        ,  8.32586332],
+        [21.        ,  7.85875308],
+        [16.        ,  7.07106781],
+        ...,
+        [ 0.        ,  0.        ],
+        [ 4.        ,  1.8       ],
+        [ 5.        ,  2.40831892]],
+
+       [[17.        ,  7.76659514],
+        [23.        ,  8.49705831],
+        [13.        ,  6.40312424],
+        ...,
+        [ 4.        ,  1.8       ],
+        [ 0.        ,  0.        ],
+        [ 2.        ,  1.6       ]],
+
+       [[15.        ,  9.33809402],
+        [21.        ,  9.95389371],
+        [11.        ,  7.96241169],
+        ...,
+        [ 5.        ,  2.40831892],
+        [ 2.        ,  1.6       ],
+        [ 0.        ,  0.        ]]], shape=(24, 24, 2)), 'max_q': 2000, 'len_q': 2, 'max_exp': 2, 'rate': 2, 'modalities': ['car', 'drone'], 'num_couriers': [15, 10], 'courier_init': [-1, 40], 'drone_speed': 0.5, 'rates_p': [0, 0, 0, 0, 0, 0, 0, 0, 0.2, 0.2, 0.2, 0, 0, 0, 0, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0], 'rates_d': [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.01, 0.01, 0.01, 0.05, 0.05, 0.05, 0.05, 0.01, 0.01, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05], 'max_lat': 70.0, 'max_tau': 30.0, 'max_utility': 35.0, 'vot_means': [0.8, 0.8, 0.8, 1.2, 1.2, 0.8, 0.8, 1.2, 5, 5, 5, 0.8, 0.8, 1.2, 1.2, 5, 5, 1.2, 1.2, 0.8, 0.8, 1.2, 1.2, 0.8], 'vot_stds': [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01], 'etas': [1, 2]}, 'project_name': 'RL_FoodDElivery', 'run_name': 'env_c10_H1_run_2', 'seed': 2, 'device': 'cpu', 'model': {'name': 'PPO', 'net_arch': [128, 128], 'policy': 'MultiInputPolicy', 'learning_rate': '1e-4', 'n_steps': 1024, 'batch_size': 128, 'n_epochs': 10, 'gamma': 0.99, 'gae_lambda': 0.95, 'clip_range': 0.2, 'ent_coef': 0.001, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'tensorboard_log': 'PPO', 'verbose': 2}, 'env_setup': {'num_proc': 8, 'timelimit': 200}, 'algo': {'name': 'default', 'total_timesteps': 5000000, 'log_interval': 1}}
+2025-06-02 14:24:33,971 INFO    MainThread:1370091 [wandb_init.py:init():680] starting backend
+2025-06-02 14:24:33,971 INFO    MainThread:1370091 [wandb_init.py:init():684] sending inform_init request
+2025-06-02 14:24:33,972 INFO    MainThread:1370091 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-06-02 14:24:33,973 INFO    MainThread:1370091 [wandb_init.py:init():697] backend started and connected
+2025-06-02 14:24:33,979 INFO    MainThread:1370091 [wandb_init.py:init():790] updated telemetry
+2025-06-02 14:24:33,988 INFO    MainThread:1370091 [wandb_init.py:init():822] communicating run to backend with 90.0 second timeout
+2025-06-02 14:24:34,408 INFO    MainThread:1370091 [wandb_init.py:init():874] starting run threads in backend
+2025-06-02 14:24:34,527 INFO    MainThread:1370091 [wandb_run.py:_console_start():2374] atexit reg
+2025-06-02 14:24:34,528 INFO    MainThread:1370091 [wandb_run.py:_redirect():2224] redirect: wrap_raw
+2025-06-02 14:24:34,528 INFO    MainThread:1370091 [wandb_run.py:_redirect():2289] Wrapping output streams.
+2025-06-02 14:24:34,528 INFO    MainThread:1370091 [wandb_run.py:_redirect():2314] Redirects installed.
+2025-06-02 14:24:34,528 INFO    MainThread:1370091 [wandb_init.py:init():916] run started, returning control to user process
+2025-06-02 14:24:38,972 INFO    MainThread:1370091 [wandb_run.py:_tensorboard_callback():1436] tensorboard callback: /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/tb/PPO_1, True
+2025-06-02 14:24:38,978 INFO    MainThread:1370091 [wandb_run.py:_config_callback():1279] config_cb None None {'policy_class': "<class 'stable_baselines3.common.policies.MultiInputActorCriticPolicy'>", 'verbose': 2, 'policy_kwargs': "{'net_arch': [128, 128]}", 'num_timesteps': 0, '_total_timesteps': 5000000, '_num_timesteps_at_start': 0, 'action_noise': 'None', 'start_time': 1748899478949898879, 'learning_rate': 0.0001, 'tensorboard_log': '/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/tb', '_last_obs': "OrderedDict([('Latencies', array([[5.5504203 , 1.9874645 ],\n       [0.01521393, 0.        ],\n       [0.2740966 , 0.8728888 ],\n       [5.366989  , 8.379419  ],\n       [0.3128626 , 3.1007311 ],\n       [3.5020158 , 4.6440034 ],\n       [1.010595  , 0.        ],\n       [1.8957504 , 3.1090043 ]], dtype=float32)), ('c_d', array([[ 1, 20, 24,  3, 21, 16, 18, 21, 22, 16, 17, 18, 19,  5,  1, 22,\n        20, 10, 18, 10, 14, 23,  3,  7, 24],\n       [ 1, 24,  5, 20, 22,  4, 10, 19, 23, 12, 10, 22, 21, 12,  1, 13,\n        15, 15, 16,  2,  7,  9, 22,  4,  6],\n       [10, 10, 14, 20, 22,  9, 23,  1, 11,  4,  1, 22,  2,  3, 12, 18,\n         5, 11, 18, 17, 12, 11,  3, 18, 22],\n       [ 2, 11, 14, 23,  7,  4, 10,  8, 21,  2, 16, 17, 19,  8, 22, 24,\n         2, 17,  8, 19,  7,  7, 21, 23, 22],\n       [11, 20, 23, 19, 21, 24, 18, 19, 23,  8,  2,  7,  3, 10, 13, 24,\n         3, 23,  8, 23, 17, 23, 20, 15,  4],\n       [13, 20,  5, 15, 18,  8,  2, 12,  4,  4, 15, 21, 24, 21, 14,  6,\n        23, 14,  6, 19, 22, 22, 21,  4,  9],\n       [21, 24, 18,  6, 20,  8, 17, 23, 18,  7, 20, 10,  4,  9, 22, 12,\n         7,  4,  6, 12, 21,  3,  4, 19, 13],\n       [ 5,  3, 16, 22, 12, 10, 19, 16, 12,  1, 11,  8,  6,  9, 15, 15,\n         1,  1,  4, 16, 19,  1, 14, 13,  2]], dtype=int32)), ('c_j', array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,\n        1, 1, 1],\n       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,\n        1, 1, 1],\n       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,\n        1, 1, 1],\n       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,\n        1, 1, 1],\n       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,\n        1, 1, 1],\n       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,\n        1, 1, 1],\n       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,\n        1, 1, 1],\n       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,\n        1, 1, 1]], dtype=int32)), ('c_l', array([[1.16815834e+01, 3.73645897e+01, 3.40458450e+01, 1.91114807e+01,\n        2.09646835e+01, 1.38388033e+01, 2.58494320e+01, 5.55042028e+00,\n        1.81896973e+01, 2.99906826e+01, 1.68915215e+01, 2.20791187e+01,\n        1.16067305e+01, 1.15376520e+01, 1.70038986e+01, 1.57490168e+01,\n        1.39317188e+01, 1.98746455e+00, 4.48410559e+00, 3.19268055e+01,\n        1.57446442e+01, 2.15636597e+01, 3.59132500e+01, 1.72638798e+01,\n        2.41058502e+01],\n       [1.35476685e+01, 5.86674213e+00, 2.08933506e+01, 1.52139338e-02,\n        4.88183451e+00, 3.13321075e+01, 3.50308723e+01, 5.82276440e+00,\n        2.37487526e+01, 2.86208000e+01, 1.31060076e+01, 8.73732790e-02,\n        2.60642796e+01, 4.23850107e+00, 1.03481293e+01, 3.15722485e+01,\n        2.24448051e+01, 0.00000000e+00, 1.82135201e+01, 2.11103840e+01,\n        7.39031649e+00, 3.51634359e+00, 2.24621067e+01, 2.10375137e+01,\n        2.71101532e+01],\n       [2.74096608e-01, 3.76716352e+00, 4.72317600e+00, 1.61831856e+01,\n        1.04001627e+01, 3.17113991e+01, 6.84450006e+00, 2.76399612e+01,\n        8.42729378e+00, 2.27524910e+01, 2.00537033e+01, 2.70879192e+01,\n        2.68482533e+01, 8.94382477e+00, 3.33306694e+01, 2.16952591e+01,\n        1.39554090e+01, 8.72888803e-01, 3.13254700e+01, 2.74656601e+01,\n        1.59751368e+01, 3.64054756e+01, 1.93760033e+01, 3.72914886e+01,\n        7.14862061e+00],\n       [2.42749100e+01, 2.84863014e+01, 1.01068840e+01, 2.63448772e+01,\n        3.59044304e+01, 2.66893063e+01, 5.36698914e+00, 1.01707478e+01,\n        7.01602268e+00, 2.13018017e+01, 1.41107693e+01, 7.14989090e+00,\n        1.41275654e+01, 2.02937088e+01, 3.44489670e+01, 1.73935356e+01,\n        1.23697243e+01, 1.28462381e+01, 1.31453705e+01, 9.91656780e+00,\n        1.19216490e+01, 2.68836708e+01, 2.31295757e+01, 8.37941933e+00,\n        3.47530670e+01],\n       [1.60256310e+01, 8.21756303e-01, 3.31338654e+01, 1.86649170e+01,\n        3.12862605e-01, 1.60867195e+01, 3.32876053e+01, 3.17542744e+01,\n        5.58363497e-01, 2.92703419e+01, 2.61653175e+01, 3.91796989e+01,\n        6.74591970e+00, 1.14624166e+01, 2.74414501e+01, 2.22943726e+01,\n        5.44831228e+00, 1.34459200e+01, 1.56430101e+01, 2.16833344e+01,\n        6.65818787e+00, 1.39043036e+01, 2.60443382e+01, 2.18042450e+01,\n        3.10073113e+00],\n       [8.59856606e+00, 2.11440697e+01, 1.25247459e+01, 3.71067314e+01,\n        1.23738241e+01, 2.73969212e+01, 2.87166939e+01, 5.26797962e+00,\n        2.91781139e+01, 1.49302425e+01, 8.57334042e+00, 8.84980583e+00,\n        1.38298073e+01, 3.50201583e+00, 3.05519962e+01, 9.88346291e+00,\n        3.32191467e+01, 2.40273342e+01, 3.90545044e+01, 1.12676535e+01,\n        2.15935421e+01, 7.25802946e+00, 1.24437037e+01, 4.64400339e+00,\n        2.18549156e+01],\n       [2.66478691e+01, 1.14811954e+01, 4.61024952e+00, 2.94528313e+01,\n        3.15450974e+01, 2.36878204e+01, 1.01059496e+00, 3.13000107e+01,\n        3.94675941e+01, 3.13078346e+01, 3.24816246e+01, 1.32108889e+01,\n        2.51799641e+01, 1.87335911e+01, 1.05703497e+01, 1.88602715e+01,\n        0.00000000e+00, 3.26188087e+01, 5.70104074e+00, 6.97780085e+00,\n        4.96695185e+00, 1.61682777e+01, 3.38964310e+01, 2.98298988e+01,\n        2.39619122e+01],\n       [5.43038130e+00, 2.74478989e+01, 2.25072556e+01, 2.60034599e+01,\n        3.19962335e+00, 1.76353607e+01, 3.77930832e+01, 2.04244957e+01,\n        3.29035988e+01, 3.87673225e+01, 1.89575040e+00, 3.05441022e+00,\n        2.03648129e+01, 3.34334679e+01, 1.80762405e+01, 3.10900426e+00,\n        2.78535328e+01, 2.77968540e+01, 2.90720978e+01, 1.65281715e+01,\n        1.56146145e+01, 9.13080692e+00, 1.19722843e+01, 7.00651217e+00,\n        9.55296040e+00]], dtype=float32)), ('o_d', array([[0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0]], dtype=int32)), ('o_l', array([[0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0]], dtype=int32)), ('o_p', array([[0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0],\n       [0, 0]], dtype=int32))])", '_last_episode_starts': '[ True  True  True  True  True  True  True  True]', '_last_original_obs': 'None', '_episode_num': 0, 'use_sde': 'False', 'sde_sample_freq': -1, '_current_progress_remaining': 1.0, '_stats_window_size': 100, 'ep_info_buffer': 'deque([], maxlen=100)', 'ep_success_buffer': 'deque([], maxlen=100)', '_n_updates': 0, '_custom_logger': 'False', '_vec_normalize_env': 'None', 'observation_space': "Dict('Latencies': Box(0.0, 350.0, (2,), float32), 'c_d': Box(1, 25, (25,), int32), 'c_j': Box(0, 2, (25,), int32), 'c_l': Box(0.0, 350.0, (25,), float32), 'o_d': Box(0, 25, (2,), int32), 'o_l': Box(0, 2, (2,), int32), 'o_p': Box(0, 25, (2,), int32))", 'action_space': 'Box(0.0, 30.0, (2,), float32)', 'n_envs': 8, 'n_steps': 128, 'gamma': 0.99, 'gae_lambda': 0.95, 'ent_coef': 0.001, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'rollout_buffer_class': "<class 'stable_baselines3.common.buffers.DictRolloutBuffer'>", 'rollout_buffer_kwargs': '{}', 'batch_size': 128, 'n_epochs': 10, 'clip_range': '<function get_schedule_fn.<locals>.<lambda> at 0x7f0e1c110e00>', 'clip_range_vf': 'None', 'normalize_advantage': 'True', 'target_kl': 'None', 'lr_schedule': '<function get_schedule_fn.<locals>.<lambda> at 0x7f0e1c110cc0>', 'rollout_buffer': '<stable_baselines3.common.buffers.DictRolloutBuffer object at 0x7f0e1c108210>', 'policy': 'MultiInputActorCriticPolicy(\n  (features_extractor): CombinedExtractor(\n    (extractors): ModuleDict(\n      (Latencies): Flatten(start_dim=1, end_dim=-1)\n      (c_d): Flatten(start_dim=1, end_dim=-1)\n      (c_j): Flatten(start_dim=1, end_dim=-1)\n      (c_l): Flatten(start_dim=1, end_dim=-1)\n      (o_d): Flatten(start_dim=1, end_dim=-1)\n      (o_l): Flatten(start_dim=1, end_dim=-1)\n      (o_p): Flatten(start_dim=1, end_dim=-1)\n    )\n  )\n  (pi_features_extractor): CombinedExtractor(\n    (extractors): ModuleDict(\n      (Latencies): Flatten(start_dim=1, end_dim=-1)\n      (c_d): Flatten(start_dim=1, end_dim=-1)\n      (c_j): Flatten(start_dim=1, end_dim=-1)\n      (c_l): Flatten(start_dim=1, end_dim=-1)\n      (o_d): Flatten(start_dim=1, end_dim=-1)\n      (o_l): Flatten(start_dim=1, end_dim=-1)\n      (o_p): Flatten(start_dim=1, end_dim=-1)\n    )\n  )\n  (vf_features_extractor): CombinedExtractor(\n    (extractors): ModuleDict(\n      (Latencies): Flatten(start_dim=1, end_dim=-1)\n      (c_d): Flatten(start_dim=1, end_dim=-1)\n      (c_j): Flatten(start_dim=1, end_dim=-1)\n      (c_l): Flatten(start_dim=1, end_dim=-1)\n      (o_d): Flatten(start_dim=1, end_dim=-1)\n      (o_l): Flatten(start_dim=1, end_dim=-1)\n      (o_p): Flatten(start_dim=1, end_dim=-1)\n    )\n  )\n  (mlp_extractor): MlpExtractor(\n    (policy_net): Sequential(\n      (0): Linear(in_features=83, out_features=128, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): Tanh()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=83, out_features=128, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=128, out_features=128, bias=True)\n      (3): Tanh()\n    )\n  )\n  (action_net): Linear(in_features=128, out_features=2, bias=True)\n  (value_net): Linear(in_features=128, out_features=1, bias=True)\n)', '_logger': '<stable_baselines3.common.logger.Logger object at 0x7f0e1c168610>'}
+2025-06-02 14:24:49,831 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:25:01,089 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:25:13,406 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:25:25,924 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:25:36,156 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:25:45,282 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:25:55,439 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:26:07,013 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:26:17,266 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:26:27,186 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:26:36,441 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:26:47,811 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:26:59,120 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:27:09,902 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:27:20,400 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:27:29,782 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:27:40,775 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:27:51,402 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:28:02,251 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:28:11,986 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:28:23,647 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:28:33,592 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:28:43,724 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:28:53,539 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:29:03,138 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:29:12,714 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:29:21,845 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:29:32,522 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:29:44,505 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:29:55,434 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:30:07,103 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:30:16,707 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:30:26,695 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:30:36,467 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:30:47,273 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:30:57,933 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:31:09,810 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:31:18,746 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:31:29,053 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:31:39,543 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:31:49,526 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:31:59,896 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:32:08,977 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:32:19,001 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:32:29,370 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:32:39,294 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:32:50,517 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:33:00,655 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:33:10,270 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:33:20,189 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:33:29,824 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:33:40,693 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:33:51,246 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:34:00,145 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:34:09,889 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:34:19,578 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:34:29,548 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:34:40,616 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:34:50,726 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:35:00,435 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:35:11,226 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:35:22,297 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:35:32,988 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:35:42,027 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:35:52,031 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:36:01,726 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:36:11,837 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:36:21,293 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:36:32,324 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:36:42,821 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:36:52,876 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:37:03,164 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:37:12,789 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:37:23,655 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:37:32,917 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:37:43,546 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:37:55,065 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:38:06,462 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:38:16,078 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:38:25,839 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:38:36,888 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:38:48,104 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:39:00,289 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:39:10,367 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:39:20,312 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:39:29,366 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:39:39,665 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:39:50,787 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:40:01,316 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:40:11,445 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:40:20,632 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:40:30,554 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:40:40,609 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:40:51,667 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:41:01,683 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:41:10,498 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:41:20,434 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:41:31,987 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:41:41,590 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:41:52,288 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:42:02,564 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:42:11,775 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:42:21,334 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:42:31,167 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:42:40,774 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:42:50,509 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:42:59,393 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:43:09,161 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:43:19,552 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:43:30,610 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:43:41,263 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:43:52,272 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:44:02,319 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:44:12,194 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:44:21,939 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:44:31,917 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:44:41,965 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:44:51,777 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:45:01,663 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:45:11,616 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:45:21,415 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:45:31,267 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:45:42,605 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:45:52,865 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:46:03,093 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:46:12,773 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:46:22,617 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:46:32,151 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:46:41,735 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:46:51,649 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:47:01,951 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:47:12,401 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:47:22,058 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:47:31,177 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:47:40,845 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:47:50,369 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:48:00,518 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:48:11,020 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:48:20,091 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:48:31,851 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:48:42,496 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:48:52,279 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:49:02,486 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:49:12,718 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:49:23,046 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:49:32,933 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:49:44,312 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:49:54,752 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:50:05,120 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:50:14,322 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:50:25,085 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:50:35,918 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:50:46,486 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:50:56,414 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:51:06,533 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:51:16,568 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:51:28,191 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:51:37,861 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:51:47,674 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:51:57,098 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:52:07,948 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:52:18,380 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:52:28,944 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:52:38,679 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:52:49,196 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:52:58,771 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:53:09,450 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:53:19,478 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:53:30,107 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:53:40,993 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:53:50,296 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:54:00,872 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:54:11,559 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:54:22,814 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:54:32,571 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:54:42,735 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:54:53,107 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:55:04,296 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:55:14,116 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:55:24,999 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:55:35,193 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:55:44,881 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:55:55,639 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:56:06,048 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:56:17,898 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:56:27,446 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:56:36,503 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:56:46,493 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:56:56,758 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:57:07,349 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:57:17,609 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:57:27,713 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:57:38,335 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:57:48,979 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:57:59,696 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:58:09,557 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:58:19,318 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:58:28,324 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:58:38,951 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:58:48,812 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:58:59,492 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:59:10,447 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:59:19,554 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:59:29,423 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:59:39,215 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 14:59:49,130 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:00:00,554 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:00:09,481 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:00:19,870 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:00:30,685 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:00:41,540 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:00:51,895 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:01:01,649 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:01:11,216 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:01:21,734 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:01:32,816 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:01:43,153 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:01:53,502 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:02:02,848 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:02:13,549 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:02:23,161 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:02:33,039 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:02:42,722 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:02:53,848 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:03:03,931 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:03:13,598 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:03:24,388 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:03:34,383 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:03:44,377 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:03:53,365 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:04:02,916 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:04:12,539 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:04:22,976 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:04:32,599 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:04:42,013 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:04:51,642 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:05:01,389 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:05:12,287 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:05:22,781 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:05:32,210 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:05:42,571 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:05:53,707 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:06:03,724 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:06:13,781 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:06:23,773 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:06:33,305 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:06:44,688 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:06:55,465 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:07:06,191 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:07:16,057 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:07:25,349 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:07:35,452 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:07:46,437 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:07:55,982 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:08:06,127 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:08:15,757 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:08:25,953 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:08:36,102 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:08:45,957 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:08:56,278 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:09:05,853 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:09:15,219 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:09:25,778 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:09:35,471 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:09:45,008 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:09:55,245 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:10:04,372 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:10:14,367 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:10:24,761 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:10:34,636 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:10:44,491 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:10:53,802 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:11:03,530 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:11:13,480 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:11:23,038 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:11:33,488 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:11:44,115 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:11:53,451 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:12:03,052 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:12:13,677 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:12:24,838 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:12:34,766 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:12:44,730 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:12:54,315 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:13:03,927 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:13:14,158 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:13:24,648 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:13:34,034 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:13:44,764 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:13:54,974 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:14:04,956 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:14:16,073 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:14:26,514 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:14:35,719 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:14:46,412 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:14:56,469 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:15:06,551 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:15:16,528 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:15:25,503 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:15:37,165 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:15:47,497 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:15:57,403 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:16:07,277 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:16:15,950 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:16:26,276 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:16:36,025 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:16:46,079 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:16:56,685 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:17:06,822 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:17:15,716 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:17:26,002 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:17:35,992 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:17:45,418 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:17:55,539 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:18:04,754 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:18:15,615 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:18:25,809 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:18:36,253 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:18:46,173 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:18:55,308 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:19:06,014 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:19:16,494 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:19:26,379 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:19:36,081 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:19:46,101 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:19:55,656 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:20:05,622 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:20:15,655 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:20:25,971 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:20:35,870 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:20:46,306 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:20:56,285 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:21:07,170 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:21:17,077 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:21:27,683 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:21:37,070 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:21:46,928 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:21:57,075 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:22:08,053 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:22:19,617 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:22:30,355 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:22:39,976 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:22:50,190 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:23:00,557 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:23:11,923 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:23:21,826 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:23:30,658 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:23:40,347 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:23:50,214 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:24:01,486 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:24:11,820 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:24:21,113 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:24:32,091 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:24:41,861 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:24:51,687 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:25:01,986 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:25:12,579 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:25:22,932 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:25:33,088 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:25:43,438 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:25:54,722 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:26:04,801 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:26:13,646 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:26:23,448 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:26:33,957 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:26:44,166 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:26:54,129 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:27:03,302 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:27:14,401 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:27:24,498 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:27:34,400 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:27:44,523 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:27:54,734 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:28:04,091 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:28:14,146 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:28:24,277 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:28:34,387 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:28:45,105 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:28:54,361 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:29:05,135 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:29:16,063 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:29:25,758 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:29:35,350 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:29:44,560 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:29:55,320 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:30:05,528 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:30:15,307 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:30:25,460 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:30:36,481 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:30:45,349 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:30:54,972 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:31:04,400 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:31:13,677 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:31:23,883 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:31:34,180 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:31:44,898 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:31:56,708 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:32:09,057 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:32:19,125 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:32:28,670 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:32:39,759 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:32:50,397 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:33:01,124 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:33:11,468 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:33:21,665 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:33:31,465 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:33:41,246 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:33:51,819 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:34:02,846 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:34:12,730 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:34:21,985 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:34:32,573 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:34:42,995 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:34:52,603 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:35:02,472 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:35:11,560 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:35:21,232 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:35:33,065 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:35:43,141 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:35:54,212 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:36:05,782 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:36:16,094 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:36:26,380 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:36:37,162 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:36:47,149 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:36:56,881 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:37:07,339 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:37:17,403 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:37:28,059 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:37:37,969 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:37:47,992 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:37:57,035 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:38:07,628 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:38:17,419 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:38:27,158 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:38:36,994 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:38:46,534 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:38:56,756 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:39:06,522 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:39:18,524 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:39:30,461 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:39:40,634 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:39:49,683 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:40:00,229 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:40:11,408 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:40:22,220 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:40:31,843 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:40:40,740 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:40:50,266 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:41:00,243 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:41:10,322 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:41:21,791 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:41:32,172 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:41:40,997 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:41:51,099 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:42:02,140 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:42:12,425 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:42:22,084 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:42:31,188 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:42:41,127 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:42:50,735 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:43:00,292 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:43:10,111 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:43:18,973 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:43:30,870 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:43:41,518 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:43:51,756 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:44:01,514 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:44:11,498 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:44:20,496 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:44:30,319 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:44:41,626 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:44:51,846 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:45:02,055 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:45:12,562 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:45:23,004 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:45:33,592 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:45:43,812 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:45:53,689 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:46:03,149 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:46:13,880 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:46:24,345 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:46:35,334 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:46:45,556 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:46:56,158 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:47:05,850 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:47:15,801 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:47:25,773 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:47:35,528 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:47:45,759 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:47:56,544 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:48:07,092 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:48:16,993 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:48:26,859 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:48:36,334 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:48:44,953 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:48:55,021 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:49:04,996 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:49:15,928 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:49:26,575 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:49:37,215 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:49:46,125 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:49:56,791 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:50:07,268 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:50:17,368 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:50:27,932 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:50:38,281 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:50:48,951 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:50:58,764 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:51:09,613 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:51:19,454 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:51:28,392 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:51:38,191 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:51:48,485 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:51:58,862 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:52:10,399 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:52:20,267 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:52:29,402 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:52:40,448 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:52:50,084 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:52:59,759 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:53:10,761 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:53:20,060 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:53:29,715 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:53:40,640 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:53:51,706 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:54:01,669 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:54:10,949 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:54:21,744 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:54:33,881 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:54:43,913 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:54:54,301 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:55:04,464 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:55:14,528 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:55:25,113 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:55:34,702 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:55:44,229 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:55:54,951 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:56:04,314 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:56:14,741 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:56:26,482 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:56:37,480 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:56:47,500 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:56:56,626 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:57:06,492 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:57:16,464 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:57:26,882 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:57:38,917 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:57:50,003 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:57:58,958 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:58:08,571 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:58:18,554 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:58:28,694 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:58:39,541 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:58:48,546 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:58:59,766 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:59:09,873 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:59:19,866 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:59:30,378 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:59:40,712 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 15:59:51,027 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:00:01,272 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:00:11,289 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:00:21,570 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:00:32,447 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:00:41,333 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:00:50,992 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:01:00,577 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:01:11,740 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:01:21,890 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:01:30,880 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:01:40,739 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:01:51,296 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:02:01,911 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:02:11,942 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:02:21,676 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:02:32,713 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:02:42,572 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:02:53,631 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:03:04,276 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:03:14,244 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:03:23,796 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:03:34,224 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:03:44,045 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:03:54,013 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:04:04,598 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:04:14,058 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:04:24,033 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:04:34,707 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:04:44,740 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:04:54,313 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:05:05,103 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:05:15,182 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:05:25,675 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:05:35,672 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:05:45,630 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:05:56,112 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:06:06,804 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:06:16,533 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:06:27,471 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:06:37,315 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:06:48,273 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:06:57,227 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:07:07,546 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:07:18,705 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:07:29,057 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:07:39,152 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:07:48,202 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:07:59,830 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:08:09,700 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:08:19,575 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:08:30,674 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:08:41,692 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:08:51,517 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:09:01,378 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:09:11,327 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:09:21,167 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:09:32,032 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:09:41,142 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:09:53,232 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:10:03,814 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:10:14,308 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:10:25,153 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:10:34,798 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:10:45,260 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:10:46,109 INFO    MainThread:1370091 [sb3.py:save_model():147] Saving model checkpoint to /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_2/models/model.zip
+2025-06-02 16:10:46,110 INFO    MainThread:1370091 [wandb_run.py:_finish():2100] finishing run Zibaie_RL/RL_FoodDElivery/0tufko96
+2025-06-02 16:10:46,110 INFO    MainThread:1370091 [wandb_run.py:_atexit_cleanup():2339] got exitcode: 0
+2025-06-02 16:10:46,110 INFO    MainThread:1370091 [wandb_run.py:_restore():2321] restore
+2025-06-02 16:10:46,110 INFO    MainThread:1370091 [wandb_run.py:_restore():2327] restore done
+2025-06-02 16:10:47,991 INFO    MainThread:1370091 [wandb_run.py:_footer_history_summary_info():3892] rendering history
+2025-06-02 16:10:47,994 INFO    MainThread:1370091 [wandb_run.py:_footer_history_summary_info():3924] rendering summary
+2025-06-02 16:10:48,007 INFO    MainThread:1370091 [wandb_run.py:_footer_sync_info():3853] logging synced files

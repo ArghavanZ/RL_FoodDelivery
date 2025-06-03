@@ -1,0 +1,18 @@
+{"time":"2025-06-02T16:05:00.416157705-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-02T16:05:00.416197069-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_2/PPO/env_c20_H1_run_3/wandb/run-20250602_160500-zs9ak29c/logs/debug-core.log"}
+{"time":"2025-06-02T16:05:00.539927973-07:00","level":"INFO","msg":"created new stream","id":"zs9ak29c"}
+{"time":"2025-06-02T16:05:00.539975039-07:00","level":"INFO","msg":"stream: started","id":"zs9ak29c"}
+{"time":"2025-06-02T16:05:00.540026829-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"zs9ak29c"}
+{"time":"2025-06-02T16:05:00.540112467-07:00","level":"INFO","msg":"sender: started","stream_id":"zs9ak29c"}
+{"time":"2025-06-02T16:05:00.54020504-07:00","level":"INFO","msg":"handler: started","stream_id":"zs9ak29c"}
+{"time":"2025-06-02T16:05:00.775994886-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T16:05:15.359796662-07:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-06-02T17:49:19.451200303-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T17:49:19.452053819-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T17:49:20.436923119-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T17:49:20.456596917-07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 63415-63466, summary, console lines 107370-107413","runtime_seconds":0.018735367}],"total_operations":1}}
+{"time":"2025-06-02T17:49:21.597678026-07:00","level":"INFO","msg":"stream: closing","id":"zs9ak29c"}
+{"time":"2025-06-02T17:49:21.59773554-07:00","level":"INFO","msg":"handler: closed","stream_id":"zs9ak29c"}
+{"time":"2025-06-02T17:49:21.597762284-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"zs9ak29c"}
+{"time":"2025-06-02T17:49:21.597794127-07:00","level":"INFO","msg":"sender: closed","stream_id":"zs9ak29c"}
+{"time":"2025-06-02T17:49:21.597943949-07:00","level":"INFO","msg":"stream: closed","id":"zs9ak29c"}

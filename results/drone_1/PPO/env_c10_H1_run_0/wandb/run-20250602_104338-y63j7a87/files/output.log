@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/arghavan/2025/RL_FoodDelivery/scripts/train1.py", line 207, in <module>
+    main()
+  File "/home/arghavan/2025/RL_FoodDelivery/scripts/train1.py", line 190, in main
+    run_seed(env_cfg, hp_cfg , save_dir)
+  File "/home/arghavan/2025/RL_FoodDelivery/scripts/train1.py", line 162, in run_seed
+    train(env_cfg, hp_cfg, exp_dir)
+  File "/home/arghavan/2025/RL_FoodDelivery/scripts/train1.py", line 60, in train
+    env = VecMonitor(SubprocVecEnv(env_list))
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/arghavan/anaconda3/envs/drone_rl/lib/python3.11/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 119, in __init__
+    observation_space, action_space = self.remotes[0].recv()
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/arghavan/anaconda3/envs/drone_rl/lib/python3.11/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/arghavan/anaconda3/envs/drone_rl/lib/python3.11/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/home/arghavan/anaconda3/envs/drone_rl/lib/python3.11/multiprocessing/connection.py", line 395, in _recv
+    chunk = read(handle, remaining)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer

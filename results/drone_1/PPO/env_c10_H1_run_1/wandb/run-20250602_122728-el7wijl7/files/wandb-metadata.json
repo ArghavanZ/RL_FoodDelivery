@@ -1,0 +1,70 @@
+{
+  "os":  "Linux-5.15.0-117-generic-x86_64-with-glibc2.31",
+  "python":  "CPython 3.11.11",
+  "startedAt":  "2025-06-02T19:27:28.624042Z",
+  "args":  [
+    "--start_seed",
+    "0",
+    "--n_seeds",
+    "5",
+    "--HP_path",
+    "hyperparameters/H1.yaml",
+    "--C_path",
+    "env_config/env_c10.yaml"
+  ],
+  "program":  "/home/arghavan/2025/RL_FoodDelivery/scripts/train1.py",
+  "codePath":  "scripts/train1.py",
+  "git":  {
+    "remote":  "https://github.com/ArghavanZ/RL_FoodDelivery.git",
+    "commit":  "e02a897aeedc50981e0a0bb0fe8bd8c48f433ab6"
+  },
+  "email":  "zibaie@ucsb.edu",
+  "root":  "/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_1",
+  "host":  "zapdos",
+  "executable":  "/home/arghavan/anaconda3/envs/drone_rl/bin/python",
+  "codePathLocal":  "scripts/train1.py",
+  "cpu_count":  20,
+  "cpu_count_logical":  40,
+  "gpu":  "NVIDIA GeForce GTX 1080 Ti",
+  "gpu_count":  4,
+  "disk":  {
+    "/":  {
+      "total":  "2006245232640",
+      "used":  "1819367047168"
+    }
+  },
+  "memory":  {
+    "total":  "270069030912"
+  },
+  "cpu":  {
+    "count":  20,
+    "countLogical":  40
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce GTX 1080 Ti",
+      "memoryTotal":  "11811160064",
+      "cudaCores":  3584,
+      "architecture":  "Pascal"
+    },
+    {
+      "name":  "NVIDIA GeForce GTX 1080 Ti",
+      "memoryTotal":  "11811160064",
+      "cudaCores":  3584,
+      "architecture":  "Pascal"
+    },
+    {
+      "name":  "NVIDIA GeForce GTX 1080 Ti",
+      "memoryTotal":  "11811160064",
+      "cudaCores":  3584,
+      "architecture":  "Pascal"
+    },
+    {
+      "name":  "NVIDIA GeForce GTX 1080 Ti",
+      "memoryTotal":  "11811160064",
+      "cudaCores":  3584,
+      "architecture":  "Pascal"
+    }
+  ],
+  "cudaVersion":  "12.2"
+}

@@ -1,0 +1,493 @@
+_current_progress_remaining:
+    value: 1
+_custom_logger:
+    value: "False"
+_episode_num:
+    value: 0
+_last_episode_starts:
+    value: '[ True  True  True  True  True  True  True  True]'
+_last_obs:
+    value: |-
+        OrderedDict([('Latencies', array([[0.01521393, 0.        ],
+               [0.2740966 , 0.8728888 ],
+               [5.366989  , 8.379419  ],
+               [0.3128626 , 3.1007311 ],
+               [3.5020158 , 4.6440034 ],
+               [1.010595  , 0.        ],
+               [1.8957504 , 3.1090043 ],
+               [1.6489824 , 0.13914101]], dtype=float32)), ('c_d', array([[ 1, 24,  5, 20, 22,  4, 10, 19, 23, 12, 10, 22, 21, 12,  1, 13,
+                15, 15, 16,  2,  7,  9, 22,  4,  6],
+               [10, 10, 14, 20, 22,  9, 23,  1, 11,  4,  1, 22,  2,  3, 12, 18,
+                 5, 11, 18, 17, 12, 11,  3, 18, 22],
+               [ 2, 11, 14, 23,  7,  4, 10,  8, 21,  2, 16, 17, 19,  8, 22, 24,
+                 2, 17,  8, 19,  7,  7, 21, 23, 22],
+               [11, 20, 23, 19, 21, 24, 18, 19, 23,  8,  2,  7,  3, 10, 13, 24,
+                 3, 23,  8, 23, 17, 23, 20, 15,  4],
+               [13, 20,  5, 15, 18,  8,  2, 12,  4,  4, 15, 21, 24, 21, 14,  6,
+                23, 14,  6, 19, 22, 22, 21,  4,  9],
+               [21, 24, 18,  6, 20,  8, 17, 23, 18,  7, 20, 10,  4,  9, 22, 12,
+                 7,  4,  6, 12, 21,  3,  4, 19, 13],
+               [ 5,  3, 16, 22, 12, 10, 19, 16, 12,  1, 11,  8,  6,  9, 15, 15,
+                 1,  1,  4, 16, 19,  1, 14, 13,  2],
+               [20,  9, 19,  9, 15,  2, 24, 12,  8, 19, 14,  9,  2, 15,  8, 21,
+                 1, 13, 24,  6,  8,  1, 15,  2,  8]], dtype=int32)), ('c_j', array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+                1, 1, 1]], dtype=int32)), ('c_l', array([[1.35476685e+01, 5.86674213e+00, 2.08933506e+01, 1.52139338e-02,
+                4.88183451e+00, 3.13321075e+01, 3.50308723e+01, 5.82276440e+00,
+                2.37487526e+01, 2.86208000e+01, 1.31060076e+01, 8.73732790e-02,
+                2.60642796e+01, 4.23850107e+00, 1.03481293e+01, 3.15722485e+01,
+                2.24448051e+01, 0.00000000e+00, 1.82135201e+01, 2.11103840e+01,
+                7.39031649e+00, 3.51634359e+00, 2.24621067e+01, 2.10375137e+01,
+                2.71101532e+01],
+               [2.74096608e-01, 3.76716352e+00, 4.72317600e+00, 1.61831856e+01,
+                1.04001627e+01, 3.17113991e+01, 6.84450006e+00, 2.76399612e+01,
+                8.42729378e+00, 2.27524910e+01, 2.00537033e+01, 2.70879192e+01,
+                2.68482533e+01, 8.94382477e+00, 3.33306694e+01, 2.16952591e+01,
+                1.39554090e+01, 8.72888803e-01, 3.13254700e+01, 2.74656601e+01,
+                1.59751368e+01, 3.64054756e+01, 1.93760033e+01, 3.72914886e+01,
+                7.14862061e+00],
+               [2.42749100e+01, 2.84863014e+01, 1.01068840e+01, 2.63448772e+01,
+                3.59044304e+01, 2.66893063e+01, 5.36698914e+00, 1.01707478e+01,
+                7.01602268e+00, 2.13018017e+01, 1.41107693e+01, 7.14989090e+00,
+                1.41275654e+01, 2.02937088e+01, 3.44489670e+01, 1.73935356e+01,
+                1.23697243e+01, 1.28462381e+01, 1.31453705e+01, 9.91656780e+00,
+                1.19216490e+01, 2.68836708e+01, 2.31295757e+01, 8.37941933e+00,
+                3.47530670e+01],
+               [1.60256310e+01, 8.21756303e-01, 3.31338654e+01, 1.86649170e+01,
+                3.12862605e-01, 1.60867195e+01, 3.32876053e+01, 3.17542744e+01,
+                5.58363497e-01, 2.92703419e+01, 2.61653175e+01, 3.91796989e+01,
+                6.74591970e+00, 1.14624166e+01, 2.74414501e+01, 2.22943726e+01,
+                5.44831228e+00, 1.34459200e+01, 1.56430101e+01, 2.16833344e+01,
+                6.65818787e+00, 1.39043036e+01, 2.60443382e+01, 2.18042450e+01,
+                3.10073113e+00],
+               [8.59856606e+00, 2.11440697e+01, 1.25247459e+01, 3.71067314e+01,
+                1.23738241e+01, 2.73969212e+01, 2.87166939e+01, 5.26797962e+00,
+                2.91781139e+01, 1.49302425e+01, 8.57334042e+00, 8.84980583e+00,
+                1.38298073e+01, 3.50201583e+00, 3.05519962e+01, 9.88346291e+00,
+                3.32191467e+01, 2.40273342e+01, 3.90545044e+01, 1.12676535e+01,
+                2.15935421e+01, 7.25802946e+00, 1.24437037e+01, 4.64400339e+00,
+                2.18549156e+01],
+               [2.66478691e+01, 1.14811954e+01, 4.61024952e+00, 2.94528313e+01,
+                3.15450974e+01, 2.36878204e+01, 1.01059496e+00, 3.13000107e+01,
+                3.94675941e+01, 3.13078346e+01, 3.24816246e+01, 1.32108889e+01,
+                2.51799641e+01, 1.87335911e+01, 1.05703497e+01, 1.88602715e+01,
+                0.00000000e+00, 3.26188087e+01, 5.70104074e+00, 6.97780085e+00,
+                4.96695185e+00, 1.61682777e+01, 3.38964310e+01, 2.98298988e+01,
+                2.39619122e+01],
+               [5.43038130e+00, 2.74478989e+01, 2.25072556e+01, 2.60034599e+01,
+                3.19962335e+00, 1.76353607e+01, 3.77930832e+01, 2.04244957e+01,
+                3.29035988e+01, 3.87673225e+01, 1.89575040e+00, 3.05441022e+00,
+                2.03648129e+01, 3.34334679e+01, 1.80762405e+01, 3.10900426e+00,
+                2.78535328e+01, 2.77968540e+01, 2.90720978e+01, 1.65281715e+01,
+                1.56146145e+01, 9.13080692e+00, 1.19722843e+01, 7.00651217e+00,
+                9.55296040e+00],
+               [3.06705594e+00, 3.64998512e+01, 2.50906658e+01, 2.55827827e+01,
+                2.99242554e+01, 3.81601105e+01, 2.59515781e+01, 1.83336563e+01,
+                7.11376858e+00, 3.83367386e+01, 3.58412247e+01, 3.23833942e+00,
+                1.64898241e+00, 3.84696884e+01, 1.46986542e+01, 1.68150597e+01,
+                1.39141008e-01, 9.66538334e+00, 3.51723595e+01, 3.50803795e+01,
+                2.96243668e+01, 9.94427109e+00, 6.82006884e+00, 1.18830967e+01,
+                3.51955986e+01]], dtype=float32)), ('o_d', array([[0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0]], dtype=int32)), ('o_l', array([[0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0]], dtype=int32)), ('o_p', array([[0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0],
+               [0, 0]], dtype=int32))])
+_last_original_obs:
+    value: None
+_logger:
+    value: <stable_baselines3.common.logger.Logger object at 0x7f321691d990>
+_n_updates:
+    value: 0
+_num_timesteps_at_start:
+    value: 0
+_stats_window_size:
+    value: 100
+_total_timesteps:
+    value: 5000000
+_vec_normalize_env:
+    value: None
+_wandb:
+    value:
+        cli_version: 0.19.1
+        m: []
+        python_version: 3.11.11
+        t:
+            "1":
+                - 1
+                - 55
+            "2":
+                - 1
+                - 55
+            "3":
+                - 2
+                - 3
+                - 13
+                - 16
+                - 22
+                - 23
+                - 34
+                - 35
+                - 55
+            "4": 3.11.11
+            "5": 0.19.1
+            "8":
+                - 5
+            "12": 0.19.1
+            "13": linux-x86_64
+action_noise:
+    value: None
+action_space:
+    value: Box(0.0, 30.0, (2,), float32)
+algo:
+    value:
+        log_interval: 1
+        name: default
+        total_timesteps: 5000000
+batch_size:
+    value: 128
+clip_range:
+    value: <function get_schedule_fn.<locals>.<lambda> at 0x7f31f1afb560>
+clip_range_vf:
+    value: None
+device:
+    value: cpu
+ent_coef:
+    value: 0.001
+env:
+    value:
+        T_T: |-
+            [[[ 0.          0.        ]
+              [ 6.          5.4       ]
+              [ 4.          1.4       ]
+              ...
+              [20.          8.32586332]
+              [17.          7.76659514]
+              [15.          9.33809402]]
+
+             [[ 6.          5.4       ]
+              [ 0.          0.        ]
+              [10.          5.57853027]
+              ...
+              [21.          7.85875308]
+              [23.          8.49705831]
+              [21.          9.95389371]]
+
+             [[ 4.          1.4       ]
+              [10.          5.57853027]
+              [ 0.          0.        ]
+              ...
+              [16.          7.07106781]
+              [13.          6.40312424]
+              [11.          7.96241169]]
+
+             ...
+
+             [[20.          8.32586332]
+              [21.          7.85875308]
+              [16.          7.07106781]
+              ...
+              [ 0.          0.        ]
+              [ 4.          1.8       ]
+              [ 5.          2.40831892]]
+
+             [[17.          7.76659514]
+              [23.          8.49705831]
+              [13.          6.40312424]
+              ...
+              [ 4.          1.8       ]
+              [ 0.          0.        ]
+              [ 2.          1.6       ]]
+
+             [[15.          9.33809402]
+              [21.          9.95389371]
+              [11.          7.96241169]
+              ...
+              [ 5.          2.40831892]
+              [ 2.          1.6       ]
+              [ 0.          0.        ]]]
+        courier_init:
+            - -1
+            - 40
+        drone_speed: 0.5
+        etas:
+            - 1
+            - 2
+        len_q: 2
+        max_exp: 3
+        max_lat: 70
+        max_q: 2000
+        max_tau: 30
+        max_utility: 35
+        modalities:
+            - car
+            - drone
+        n_links: 76
+        n_nodes: 24
+        name: drone_1
+        net: SiouxFalls
+        num_couriers:
+            - 15
+            - 10
+        rate: 2
+        rates_d:
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.01
+            - 0.01
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+            - 0.05
+        rates_p:
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0.2
+            - 0.2
+            - 0.2
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0.2
+            - 0.2
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+        vot_means:
+            - 0.8
+            - 0.8
+            - 0.8
+            - 1.2
+            - 1.2
+            - 0.8
+            - 0.8
+            - 1.2
+            - 5
+            - 5
+            - 5
+            - 0.8
+            - 0.8
+            - 1.2
+            - 1.2
+            - 5
+            - 5
+            - 1.2
+            - 1.2
+            - 0.8
+            - 0.8
+            - 1.2
+            - 1.2
+            - 0.8
+        vot_stds:
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+            - 0.01
+env_setup:
+    value:
+        num_proc: 8
+        timelimit: 200
+ep_info_buffer:
+    value: deque([], maxlen=100)
+ep_success_buffer:
+    value: deque([], maxlen=100)
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0001
+lr_schedule:
+    value: <function get_schedule_fn.<locals>.<lambda> at 0x7f31f1af8040>
+max_grad_norm:
+    value: 0.5
+model:
+    value:
+        batch_size: 128
+        clip_range: 0.2
+        ent_coef: 0.001
+        gae_lambda: 0.95
+        gamma: 0.99
+        learning_rate: "1e-4"
+        max_grad_norm: 0.5
+        n_epochs: 10
+        n_steps: 1024
+        name: PPO
+        net_arch:
+            - 128
+            - 128
+        policy: MultiInputPolicy
+        tensorboard_log: PPO
+        verbose: 2
+        vf_coef: 0.5
+n_envs:
+    value: 8
+n_epochs:
+    value: 10
+n_steps:
+    value: 128
+normalize_advantage:
+    value: "True"
+num_timesteps:
+    value: 0
+observation_space:
+    value: 'Dict(''Latencies'': Box(0.0, 350.0, (2,), float32), ''c_d'': Box(1, 25, (25,), int32), ''c_j'': Box(0, 2, (25,), int32), ''c_l'': Box(0.0, 350.0, (25,), float32), ''o_d'': Box(0, 25, (2,), int32), ''o_l'': Box(0, 3, (2,), int32), ''o_p'': Box(0, 25, (2,), int32))'
+policy:
+    value: |-
+        MultiInputActorCriticPolicy(
+          (features_extractor): CombinedExtractor(
+            (extractors): ModuleDict(
+              (Latencies): Flatten(start_dim=1, end_dim=-1)
+              (c_d): Flatten(start_dim=1, end_dim=-1)
+              (c_j): Flatten(start_dim=1, end_dim=-1)
+              (c_l): Flatten(start_dim=1, end_dim=-1)
+              (o_d): Flatten(start_dim=1, end_dim=-1)
+              (o_l): Flatten(start_dim=1, end_dim=-1)
+              (o_p): Flatten(start_dim=1, end_dim=-1)
+            )
+          )
+          (pi_features_extractor): CombinedExtractor(
+            (extractors): ModuleDict(
+              (Latencies): Flatten(start_dim=1, end_dim=-1)
+              (c_d): Flatten(start_dim=1, end_dim=-1)
+              (c_j): Flatten(start_dim=1, end_dim=-1)
+              (c_l): Flatten(start_dim=1, end_dim=-1)
+              (o_d): Flatten(start_dim=1, end_dim=-1)
+              (o_l): Flatten(start_dim=1, end_dim=-1)
+              (o_p): Flatten(start_dim=1, end_dim=-1)
+            )
+          )
+          (vf_features_extractor): CombinedExtractor(
+            (extractors): ModuleDict(
+              (Latencies): Flatten(start_dim=1, end_dim=-1)
+              (c_d): Flatten(start_dim=1, end_dim=-1)
+              (c_j): Flatten(start_dim=1, end_dim=-1)
+              (c_l): Flatten(start_dim=1, end_dim=-1)
+              (o_d): Flatten(start_dim=1, end_dim=-1)
+              (o_l): Flatten(start_dim=1, end_dim=-1)
+              (o_p): Flatten(start_dim=1, end_dim=-1)
+            )
+          )
+          (mlp_extractor): MlpExtractor(
+            (policy_net): Sequential(
+              (0): Linear(in_features=83, out_features=128, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=128, out_features=128, bias=True)
+              (3): Tanh()
+            )
+            (value_net): Sequential(
+              (0): Linear(in_features=83, out_features=128, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=128, out_features=128, bias=True)
+              (3): Tanh()
+            )
+          )
+          (action_net): Linear(in_features=128, out_features=2, bias=True)
+          (value_net): Linear(in_features=128, out_features=1, bias=True)
+        )
+policy_class:
+    value: <class 'stable_baselines3.common.policies.MultiInputActorCriticPolicy'>
+policy_kwargs:
+    value: '{''net_arch'': [128, 128]}'
+project_name:
+    value: RL_FoodDElivery
+rollout_buffer:
+    value: <stable_baselines3.common.buffers.DictRolloutBuffer object at 0x7f321462c3d0>
+rollout_buffer_class:
+    value: <class 'stable_baselines3.common.buffers.DictRolloutBuffer'>
+rollout_buffer_kwargs:
+    value: '{}'
+run_name:
+    value: env_c11_H1_run_3
+sde_sample_freq:
+    value: -1
+seed:
+    value: 3
+start_time:
+    value: 1748944540673151649
+target_kl:
+    value: None
+tensorboard_log:
+    value: /home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c11_H1_run_3/tb
+use_sde:
+    value: "False"
+verbose:
+    value: 2
+vf_coef:
+    value: 0.5

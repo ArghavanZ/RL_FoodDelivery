@@ -213,7 +213,7 @@ class MMDelivery(gym.Env):
                 "mode": self.chosen_mode,
                 "region":self.chosen_reg,
                 "Queue_Length": len(self.queue),
-                "arrivals": self.index_order,
+                "arrivals": self.idx_order,
             }
         else:
             info = {
@@ -225,7 +225,7 @@ class MMDelivery(gym.Env):
                 "mode": None,
                 "region":None,
                 "Queue_Length": len(self.queue),
-                "arrivals": self.index_order,
+                "arrivals": self.idx_order,
             }
 
         return info

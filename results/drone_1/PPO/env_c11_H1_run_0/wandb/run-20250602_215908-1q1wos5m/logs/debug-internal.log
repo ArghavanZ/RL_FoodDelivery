@@ -1,0 +1,18 @@
+{"time":"2025-06-02T21:59:08.768841994-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-02T21:59:08.768882888-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c11_H1_run_0/wandb/run-20250602_215908-1q1wos5m/logs/debug-core.log"}
+{"time":"2025-06-02T21:59:08.898730967-07:00","level":"INFO","msg":"created new stream","id":"1q1wos5m"}
+{"time":"2025-06-02T21:59:08.898827534-07:00","level":"INFO","msg":"stream: started","id":"1q1wos5m"}
+{"time":"2025-06-02T21:59:08.898895133-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"1q1wos5m"}
+{"time":"2025-06-02T21:59:08.898895123-07:00","level":"INFO","msg":"sender: started","stream_id":"1q1wos5m"}
+{"time":"2025-06-02T21:59:08.898979846-07:00","level":"INFO","msg":"handler: started","stream_id":"1q1wos5m"}
+{"time":"2025-06-02T21:59:09.201918886-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T21:59:24.227996323-07:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-06-02T23:34:24.638932492-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T23:34:24.639958972-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T23:34:25.640030069-07:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading model.zip","runtime_seconds":0.31233048,"progress":"689.6KB/689.6KB"},{"desc":"uploading results/drone_1/PPO/env_c11_H1_run_0/tb/PPO_1/events.out.tfevents.1748926754.zapdos.2150011.0","runtime_seconds":0.312300917,"progress":"3.5MB/3.5MB"}],"total_operations":2}}
+{"time":"2025-06-02T23:34:25.661879181-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T23:34:26.912736165-07:00","level":"INFO","msg":"stream: closing","id":"1q1wos5m"}
+{"time":"2025-06-02T23:34:26.912784006-07:00","level":"INFO","msg":"handler: closed","stream_id":"1q1wos5m"}
+{"time":"2025-06-02T23:34:26.912832866-07:00","level":"INFO","msg":"sender: closed","stream_id":"1q1wos5m"}
+{"time":"2025-06-02T23:34:26.912819359-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"1q1wos5m"}
+{"time":"2025-06-02T23:34:26.912998053-07:00","level":"INFO","msg":"stream: closed","id":"1q1wos5m"}

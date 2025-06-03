@@ -1,0 +1,18 @@
+{"time":"2025-06-02T16:10:48.052163413-07:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-06-02T16:10:48.052202894-07:00","level":"INFO","msg":"created symlink","path":"/home/arghavan/2025/RL_FoodDelivery/results/drone_1/PPO/env_c10_H1_run_3/wandb/run-20250602_161048-mugbhptw/logs/debug-core.log"}
+{"time":"2025-06-02T16:10:48.176869119-07:00","level":"INFO","msg":"created new stream","id":"mugbhptw"}
+{"time":"2025-06-02T16:10:48.176915433-07:00","level":"INFO","msg":"stream: started","id":"mugbhptw"}
+{"time":"2025-06-02T16:10:48.177020059-07:00","level":"INFO","msg":"writer: Do: started","stream_id":"mugbhptw"}
+{"time":"2025-06-02T16:10:48.177101101-07:00","level":"INFO","msg":"handler: started","stream_id":"mugbhptw"}
+{"time":"2025-06-02T16:10:48.177193701-07:00","level":"INFO","msg":"sender: started","stream_id":"mugbhptw"}
+{"time":"2025-06-02T16:10:48.409033218-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T16:11:02.969713211-07:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-06-02T18:31:07.828710923-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T18:31:07.829422139-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T18:31:08.691503762-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T18:31:08.819290672-07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-06-02T18:31:09.844581168-07:00","level":"INFO","msg":"stream: closing","id":"mugbhptw"}
+{"time":"2025-06-02T18:31:09.844631202-07:00","level":"INFO","msg":"handler: closed","stream_id":"mugbhptw"}
+{"time":"2025-06-02T18:31:09.844655465-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":"mugbhptw"}
+{"time":"2025-06-02T18:31:09.844730241-07:00","level":"INFO","msg":"sender: closed","stream_id":"mugbhptw"}
+{"time":"2025-06-02T18:31:09.844807742-07:00","level":"INFO","msg":"stream: closed","id":"mugbhptw"}
