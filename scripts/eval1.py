@@ -89,14 +89,14 @@ def run_n_evals(env, policy, policy_name, n, seed,  directory , env_cfg):
             ep_rew += rew
             i_reg = info['region'] # region is 1-indexed, so we need to subtract 1
             i_mode = info['mode']
+            ep_arrival = info['arrivals']
+            ep_queue = max(info['Queue_Length'],ep_queue)
             if i_reg is not None and i_reg > 0:
                 # acquire rolling stats for ALL
                 ep_uti += info['utility']
                 ep_tau += info['tau']
                 ep_lat += info['lat']
                 ep_ord += info['ord']
-                ep_arrival = info['arrivals']
-                ep_queue = max(info['Queue_Length'],ep_queue)
                 ep_modes[i_mode] += 1
                 # acquire rolling stats for REG
                 reg_uti[i_reg -1] += info['utility']
