@@ -1,0 +1,45 @@
+
+env:
+  # base parms
+  name: 'drone_1'
+  
+  # env specific params 
+  net: 'SiouxFalls'  # The transportation network to use, 'SiouxFalls'
+  # 'SiouxFalls' is a small network with 24 nodes and 38 links -> number of possible od pairs is 24*23 = 552
+  n_nodes: 24  # The number of nodes in the network (The number of regions)
+  n_links: 76  # The number of links in the network (The number of edges) (all have two directions, 76 link in total)
+
+  T_T: []
+  max_q: 2000  # number of random orders to generate, much larger than time horizon
+  len_q: 3  # length of the visible queue (no queue!)
+  max_exp: 2  # the waiting time limit for orders expiring (no waiting!)
+  rate: 1  # the rate of orders arriving per second (10 orders per min)
+
+
+  modalities: ["car", "drone"]  # list of str, length M, represents courier modes
+  num_couriers: [15, 10]  # number of couriers of each modality
+  courier_init: [-1, 40]  # initial latency is initialized as uniform between these parameters (and truncated to be positive).
+  drone_speed: 0.5  # speed of the drone (in units of distance per time step)
+
+  ##### set of dountown nodes 
+  # {9,10,11,16,17}
+  ##### set of rich nodes 
+  # {4 , 5, 8, 14, 15 , 18, 19, 22, 23}
+  ##### set of suburban nodes
+  # {1, 2, 3, 6, 7, 12, 13, 20, 21, 24}
+
+  rates_p: [0, 0, 0, 0, 0, 0, 0, 0, 0.2, 0.2, 0.2, 0, 0, 0, 0, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0]  # relative pickup rates (sums to 1) (orders mainly places for restaurants in the dountown area).
+  rates_d: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.01, 0.01, 0.01, 0.05, 0.05, 0.05, 0.05, 0.01, 0.01, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]  # relative dropoff rates (sums to 1)(orders mainly come from regions around dountown).
+
+
+  max_lat: 70.0  # The max latency users will wait (one hour)
+  max_tau: 30.0  # The max price users will pay (20$ for delivery charge)
+  max_utility : 35.0 # The max utility for the user
+
+
+  vot_means: [0.8, 0.8, 0.8, 1.2, 1.2, 0.8, 0.8, 1.2, 5, 5, 5, 0.8, 0.8, 1.2, 1.2, 5, 5, 1.2, 1.2, 0.8, 0.8, 1.2, 1.2, 0.8]  # mean VoT of each region (suburban areas have lower VoT, middle has higher VoT, and downtown has the highest VoT)
+  vot_stds: [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01]  # standard deviation of VoT of each region (almost zero)
+
+
+
+  etas: [1, 2]  # cost per hour for each courier modality. Assume cars are independent paid contractors (so cheaper), drones need to be fully paid for. Other potential ways to model this in the reward.

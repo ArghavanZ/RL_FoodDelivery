@@ -67,7 +67,7 @@ conda activate drone_rl
 python scripts/train1.py --start_seed s --n_seeds l --HP_path hyperparameters/H1.yaml --C_path env_config/env_c10.yaml 
 ```
 
-Scenario1:
+Scenario2:
 ```bash
 conda activate drone_rl
 python scripts/train2.py --start_seed s --n_seeds l --HP_path hyperparameters/H1.yaml --C_path env_config/env_c20.yaml 
@@ -81,7 +81,7 @@ conda activate drone_rl
 python scripts/eval1.py --save_path eval/eval_env_c10_H1_r0/eval.txt --C_path env_config/env_c10.yaml --model_dir results/drone_1/PPO/env_c10_H1_run_0/models/model.zip --run_name eval_env_c10_H1_r0
 ```
 
-Scenario1:
+Scenario2:
 ```bash
 conda activate drone_rl
 python scripts/eval2.py --save_path eval/eval_env_c20_H1_r0/eval.txt --C_path env_config/env_c20.yaml --model_dir results/drone_2/PPO/env_c20_H1_run_0/models/model.zip --run_name eval_env_c20_H1_r0

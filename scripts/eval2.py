@@ -34,7 +34,7 @@ def run_n_evals(env, policy, policy_name,n, seed,  directory , env_cfg):
     wandb.init(
         # set the wandb project where this run will be logged
         #entity = "mbeliaev", # NOTE: this is your account, change accordingly
-        project='RL_eval_final', # this is our project, defined by env name
+        project='RL_FoodDElivery', # this is our project, defined by env name
         dir = directory, # this is where everything is saved, for now we do not
         name = f'{ARGS.run_name}_{policy_name}', # this will be used to display our run on wandb (and save here)
         sync_tensorboard=True,  # auto-upload sb3's tensorboard metrics
@@ -381,7 +381,7 @@ def main():
     return None
 
 if __name__ == "__main__":
-   parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--save_path', type=str, default='eval/eval_env_c20_H1_r0/eval.txt', help="location where evaluation will be saved")
     parser.add_argument('--model_dir', type=str, default='results/drone_2/PPO/env_c20_H1_run_0/models/model.zip', help="location of model to evaluate")
     parser.add_argument('--C_path', type=str, default='env_config/env_c20.yaml', help="location of yaml config file to use for environment parameters, relative to ROOT dir of project")
