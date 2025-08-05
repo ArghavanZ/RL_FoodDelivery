@@ -13,7 +13,7 @@ import yaml
 import torch
 import gymnasium as gym
 # import stablebaselines
-from stable_baselines3 import PPO
+from stable_baselines3 import PPO, SAC, DDPG, TD3, A2C
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv, VecMonitor, VecNormalize
 from stable_baselines3.common.utils import set_random_seed
 from stable_baselines3.common.evaluation import evaluate_policy
@@ -389,5 +389,20 @@ if __name__ == "__main__":
     
     ARGS = parser.parse_args()
     print(ARGS)
-    RL_MODEL = PPO.load(ARGS.model_dir)
+    
+    #### Load the RL model
+    model = ARGS.model_dir.split('/')[2] # Extract model name from path
+
+    if model == 'PPO':
+        RL_MODEL = PPO.load(ARGS.model_dir)
+    elif model == 'SAC':
+        RL_MODEL = SAC.load(ARGS.model_dir)
+    elif model == 'DDPG':
+        RL_MODEL = DDPG.load(ARGS.model_dir)
+    elif model == 'TD3':
+        RL_MODEL = TD3.load(ARGS.model_dir)
+    elif model == 'A2C':
+        RL_MODEL = A2C.load(ARGS.model_dir)
+    else:
+        raise ValueError(f"Model {model} not recognized. Supported models: PPO, SAC, DDPG, TD3, A2C.")
     main()

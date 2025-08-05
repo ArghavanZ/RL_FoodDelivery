@@ -1,0 +1,31 @@
+# meta-parameters
+project_name : ''
+run_name : ''
+seed: ''
+device: 'cpu'
+
+model:
+  name: 'SAC'
+  net_arch: [128, 128]              # Network for multi-input setup
+  policy: "MultiInputPolicy"        # For Dict observation space
+  learning_rate: 3e-4               # Stable learning rate for SAC 
+  buffer_size: 1000000              # Replay buffer size
+  batch_size: 256                   # Minibatch size (Number of samples per training batch)
+  learning_starts: 100              # Steps before training starts
+  tau: 0.005                        # Target smoothing coefficient
+  gamma: 0.99                       # Discount factor
+  train_freq: 1                     # Update frequency
+  gradient_steps: 1                  # Number of gradient steps per update
+  ent_coef: "auto"                  # Entropy coefficient (auto-tuned)
+  target_update_interval: 1         # Target network update interval
+  tensorboard_log: "SAC"
+  verbose: 2
+
+env_setup:
+  num_proc: 1
+  timelimit: 200
+
+algo:
+  name: "default"
+  total_timesteps: 5000000
+  log_interval: 1

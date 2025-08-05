@@ -14,7 +14,7 @@ import torch
 import gymnasium as gym
 
 # import stablebaselines
-from stable_baselines3 import PPO
+from stable_baselines3 import PPO, SAC, DDPG, TD3, A2C
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv, VecMonitor, VecNormalize
 from stable_baselines3.common.utils import set_random_seed
 from stable_baselines3.common.evaluation import evaluate_policy
@@ -59,35 +59,116 @@ def train(env_cfg, hp_cfg, exp_dir):
     # Pass the list of callables directly to SubprocVecEnv
     env = VecMonitor(SubprocVecEnv(env_list))
 
+    
     # SETUP MODEL
-    if hp_cfg["model"]["name"] != 'PPO':
-        raise NotImplementedError("Only PPO has been implemented for this training script.")
-    # set custom architecture
-    policy_kwargs = dict(
-        net_arch=hp_cfg["model"]["net_arch"]
-    )
+    algo_name = hp_cfg["model"]["name"]
+    policy_kwargs = dict(net_arch=hp_cfg["model"]["net_arch"])
 
-    model = PPO(
-        policy=hp_cfg["model"]["policy"], 
-        policy_kwargs=policy_kwargs, 
-        env=env,
-        learning_rate=float(hp_cfg["model"]["learning_rate"]),
-        n_steps=(hp_cfg["model"]["n_steps"])//num_proc,
-        batch_size=hp_cfg["model"]["batch_size"],
-        n_epochs=hp_cfg["model"]["n_epochs"],
-        gamma=hp_cfg["model"]["gamma"],
-        gae_lambda=hp_cfg["model"]["gae_lambda"],
-        clip_range=hp_cfg["model"]["clip_range"],
-        ent_coef=hp_cfg["model"]["ent_coef"],
-        vf_coef=hp_cfg["model"]["vf_coef"],
-        max_grad_norm=hp_cfg["model"]["max_grad_norm"],
-        tensorboard_log=f"{exp_dir}/tb",  
-        verbose=hp_cfg["model"]["verbose"],
-        seed=hp_cfg["seed"],
-        device=hp_cfg["device"]
-    )
-
-    # Train the PPO model
+    
+    if algo_name == "PPO":
+        model = PPO(
+            policy=hp_cfg["model"]["policy"], 
+            policy_kwargs=policy_kwargs, 
+            env=env,
+            learning_rate=float(hp_cfg["model"]["learning_rate"]),
+            n_steps=(hp_cfg["model"]["n_steps"])//num_proc,
+            batch_size=hp_cfg["model"]["batch_size"],
+            n_epochs=hp_cfg["model"]["n_epochs"],
+            gamma=hp_cfg["model"]["gamma"],
+            gae_lambda=hp_cfg["model"]["gae_lambda"],
+            clip_range=hp_cfg["model"]["clip_range"],
+            ent_coef=hp_cfg["model"]["ent_coef"],
+            vf_coef=hp_cfg["model"]["vf_coef"],
+            max_grad_norm=hp_cfg["model"]["max_grad_norm"],
+            tensorboard_log=f"{exp_dir}/tb",  
+            verbose=hp_cfg["model"]["verbose"],
+            seed=hp_cfg["seed"],
+            device=hp_cfg["device"]
+        )
+    elif algo_name == "SAC":
+        model = SAC(
+            policy=hp_cfg["model"]["policy"], 
+            policy_kwargs=policy_kwargs, 
+            env=env,
+            learning_rate=float(hp_cfg["model"]["learning_rate"]),
+            batch_size=hp_cfg["model"]["batch_size"],
+            buffer_size=hp_cfg["model"]["buffer_size"],
+            learning_starts=hp_cfg["model"]["learning_starts"],
+            tau=hp_cfg["model"]["tau"],
+            gamma=hp_cfg["model"]["gamma"],
+            train_freq=hp_cfg["model"]["train_freq"],
+            gradient_steps=hp_cfg["model"]["gradient_steps"],
+            ent_coef=hp_cfg["model"]["ent_coef"],
+            target_update_interval=hp_cfg["model"]["target_update_interval"],
+            tensorboard_log=f"{exp_dir}/tb",  
+            verbose=hp_cfg["model"]["verbose"],
+            seed=hp_cfg["seed"],
+            device=hp_cfg["device"]
+        )
+    elif algo_name == "DDPG":
+        model = DDPG(
+            policy=hp_cfg["model"]["policy"], 
+            policy_kwargs=policy_kwargs, 
+            env=env,
+            learning_rate=float(hp_cfg["model"]["learning_rate"]),
+            batch_size=hp_cfg["model"]["batch_size"],
+            buffer_size=hp_cfg["model"]["buffer_size"],
+            learning_starts=hp_cfg["model"]["learning_starts"],
+            tau=hp_cfg["model"]["tau"],
+            gamma=hp_cfg["model"]["gamma"],
+            train_freq=hp_cfg["model"]["train_freq"],
+            gradient_steps=hp_cfg["model"]["gradient_steps"],
+            tensorboard_log=f"{exp_dir}/tb",  
+            verbose=hp_cfg["model"]["verbose"],
+            seed=hp_cfg["seed"],
+            device=hp_cfg["device"]
+        )
+    elif algo_name == "TD3":
+        model = TD3(
+            policy=hp_cfg["model"]["policy"], 
+            policy_kwargs=policy_kwargs, 
+            env=env,
+            learning_rate=float(hp_cfg["model"]["learning_rate"]),
+            batch_size=hp_cfg["model"]["batch_size"],
+            buffer_size=hp_cfg["model"]["buffer_size"],
+            learning_starts=hp_cfg["model"]["learning_starts"],
+            tau=hp_cfg["model"]["tau"],
+            gamma=hp_cfg["model"]["gamma"],
+            train_freq=hp_cfg["model"]["train_freq"],
+            gradient_steps=hp_cfg["model"]["gradient_steps"],
+            target_policy_noise=hp_cfg["model"]["target_policy_noise"],
+            target_noise_clip=hp_cfg["model"]["target_noise_clip"],
+            tensorboard_log=f"{exp_dir}/tb",  
+            verbose=hp_cfg["model"]["verbose"],
+            seed=hp_cfg["seed"],
+            device=hp_cfg["device"]
+        )
+    # elif algo_name == "A2C":
+    #     model = A2C(
+    #         policy=hp_cfg["model"]["policy"], 
+    #         policy_kwargs=dict(
+    #             net_arch=[128, 128],
+    #             optimizer_kwargs=dict(eps=1e-5)  # <-- explicitly set eps
+    #         ),
+    #         env=env,
+    #         learning_rate=float(hp_cfg["model"]["learning_rate"]),
+    #         n_steps=hp_cfg["model"]["n_steps"]//num_proc,
+    #         gamma=hp_cfg["model"]["gamma"],
+    #         gae_lambda=hp_cfg["model"]["gae_lambda"],
+    #         ent_coef=hp_cfg["model"]["ent_coef"],
+    #         vf_coef=hp_cfg["model"]["vf_coef"],
+    #         max_grad_norm=hp_cfg["model"]["max_grad_norm"],
+    #         rms_prop_eps=hp_cfg["model"]["rms_prop_eps"],
+    #         use_rms_prop=hp_cfg["model"]["use_rms_prop"],
+    #         tensorboard_log=f"{exp_dir}/tb",  
+    #         verbose=hp_cfg["model"]["verbose"],
+    #         seed=hp_cfg["seed"],
+    #         device=hp_cfg["device"]
+    #     )
+    else:
+        raise NotImplementedError(f"Algorithm {algo_name} not supported in this script yet.")
+    
+    # Train the model
     model.learn(
         total_timesteps=hp_cfg["algo"]["total_timesteps"], 
         callback=WandbCallback(

@@ -1,0 +1,32 @@
+# meta-parameters
+project_name : ''
+run_name : ''
+seed: ''
+device: 'cpu'
+
+model:
+  name: 'TD3'
+  net_arch: [128, 128]
+  policy: "MultiInputPolicy"
+  learning_rate: 0.001               # Stable learning rate for TD3 (default is 0.001! not 0.0003)
+  buffer_size: 1000000              # Replay buffer size
+  batch_size: 256                   # Minibatch size
+  learning_starts: 100              # Steps before training starts
+  tau: 0.005                        # Target smoothing coefficient
+  gamma: 0.99                       # Discount factor
+  train_freq: 1                     # Update frequency
+  gradient_steps: 1                  # Number of gradient steps per update
+  target_policy_noise: 0.2          # Noise added to target policy
+  target_noise_clip: 0.5            # Clip for target policy noise
+  policy_delay: 2                   # Policy delay
+  tensorboard_log: "TD3"
+  verbose: 2
+
+env_setup:
+  num_proc: 1
+  timelimit: 200
+
+algo:
+  name: "default"
+  total_timesteps: 5000000
+  log_interval: 1
